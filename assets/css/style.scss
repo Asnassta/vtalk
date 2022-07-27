@@ -71,22 +71,9 @@ body.hidden {
 .logo {
 	display: inline-flex;
 	align-items: center;
-	margin-right: 15px;
+	margin-left: -12px;
 	img {
 		width: 130px;
-		//
-	}
-	&__title {
-		font-family: $ff;
-		font-size: 16px;
-		font-weight: 500;
-		color: $wh;
-		line-height: $lh;
-		text-transform: uppercase;
-		span {
-			text-transform: lowercase;
-			color: $lblue;
-		}
 	}
 }
 
@@ -146,6 +133,9 @@ body.hidden {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+	}
+	.logo {
+		margin-right: 15px;
 	}
 }
 

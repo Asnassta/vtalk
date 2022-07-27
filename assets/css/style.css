@@ -110,19 +110,9 @@ body.hidden {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-right: 15px; }
+  margin-left: -12px; }
   .logo img {
     width: 130px; }
-  .logo__title {
-    font-family: "Gilroy", sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    color: #fff;
-    line-height: 1.2;
-    text-transform: uppercase; }
-    .logo__title span {
-      text-transform: lowercase;
-      color: #3498DB; }
 
 .title {
   font-family: "Gilroy", sans-serif;
@@ -184,6 +174,8 @@ body.hidden {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between; }
+  .header .logo {
+    margin-right: 15px; }
 
 .nav {
   display: -webkit-box;
