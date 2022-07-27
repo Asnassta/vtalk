@@ -410,7 +410,8 @@ body.hidden {
     box-shadow: inset 46.3333px -46.3333px 46.3333px rgba(20, 50, 120, 0.106), inset -46.3333px 46.3333px 46.3333px rgba(255, 255, 255, 0.106);
     -webkit-backdrop-filter: blur(86.18px);
     backdrop-filter: blur(86.18px);
-    border-radius: 50px; }
+    border-radius: 50px;
+    position: relative; }
   .features__info {
     padding: 50px 40px 50px 50px;
     position: relative;
