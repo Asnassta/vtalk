@@ -624,6 +624,7 @@ body.hidden {
 		background: linear-gradient(180deg, #0D3281 0%, #1A429E 0.01%, rgba(21, 73, 184, 0.15) 100%);
 		border-radius: 30px;
 		position: relative;
+		background: url("../images/rocket.png") top center no-repeat;
 	}
 	&__info {
 		width: 50%;
@@ -636,6 +637,7 @@ body.hidden {
 		left: 42%;
 		z-index: 1;
 		img {
+			display: none;
 			width: 100%;
 		}
 	}
@@ -799,6 +801,7 @@ body.hidden {
 	.contact {
 		&__inner {
 			flex-direction: column;
+			background: linear-gradient(180deg, #0D3281 0%, #1A429E 0.01%, rgba(21, 73, 184, 0.15) 100%);
 		}
 		&__info {
 			width: 100%;
@@ -809,6 +812,9 @@ body.hidden {
 			transform: translateY(25%);
 			margin-top: -20%;
 			margin-left: -10%;
+			img {
+				display: block;
+			}
 		}
 	}
 }

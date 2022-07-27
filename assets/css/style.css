@@ -650,7 +650,8 @@ body.hidden {
     background: -o-linear-gradient(top, #0D3281 0%, #1A429E 0.01%, rgba(21, 73, 184, 0.15) 100%);
     background: linear-gradient(180deg, #0D3281 0%, #1A429E 0.01%, rgba(21, 73, 184, 0.15) 100%);
     border-radius: 30px;
-    position: relative; }
+    position: relative;
+    background: url("../images/rocket.png") top center no-repeat; }
   .contact__info {
     width: 50%;
     padding: 58px; }
@@ -661,6 +662,7 @@ body.hidden {
     left: 42%;
     z-index: 1; }
     .contact__photo img {
+      display: none;
       width: 100%; }
   .contact .title {
     margin-bottom: 25px; }
@@ -775,7 +777,11 @@ body.hidden {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
-    flex-direction: column; }
+    flex-direction: column;
+    background: -webkit-gradient(linear, left top, left bottom, from(#0D3281), color-stop(0.01%, #1A429E), to(rgba(21, 73, 184, 0.15)));
+    background: -webkit-linear-gradient(top, #0D3281 0%, #1A429E 0.01%, rgba(21, 73, 184, 0.15) 100%);
+    background: -o-linear-gradient(top, #0D3281 0%, #1A429E 0.01%, rgba(21, 73, 184, 0.15) 100%);
+    background: linear-gradient(180deg, #0D3281 0%, #1A429E 0.01%, rgba(21, 73, 184, 0.15) 100%); }
   .contact__info {
     width: 100%; }
   .contact__photo {
@@ -785,7 +791,9 @@ body.hidden {
     -ms-transform: translateY(25%);
     transform: translateY(25%);
     margin-top: -20%;
-    margin-left: -10%; } }
+    margin-left: -10%; }
+    .contact__photo img {
+      display: block; } }
 
 @media (max-width: 546px) {
   .technologes__item {
