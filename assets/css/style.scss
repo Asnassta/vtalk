@@ -765,6 +765,9 @@ body.hidden {
 		margin-top: 25px;
 	}
 	.intro {
+		&:before {
+			display: none;
+		}
 		&__inner {
 			flex-direction: column;
 		}

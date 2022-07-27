@@ -747,6 +747,8 @@ body.hidden {
     font-size: 25px; }
   .subtitle {
     margin-top: 25px; }
+  .intro:before {
+    display: none; }
   .intro__inner {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
