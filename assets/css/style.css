@@ -109,9 +109,10 @@ body.hidden {
   display: inline-flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  margin-right: 15px; }
   .logo img {
-    margin-right: 15px; }
+    width: 130px; }
   .logo__title {
     font-family: "Gilroy", sans-serif;
     font-size: 16px;
@@ -814,15 +815,15 @@ body.hidden {
   .features__photo {
     width: calc(100% + 10px); }
   .features .swiper-pagination-progressbar {
-    width: 300px !important; } }
+    width: 300px !important; }
+  .footer .nav {
+    margin: 30px 0; } }
 
 @media (max-width: 376px) {
   .contact .btn {
     width: 100%; } }
 
 @media (max-width: 374px) {
-  .footer .nav {
-    margin: 30px 0; }
   .footer .nav__link {
     font-size: 14px;
     margin-right: 25px; }
