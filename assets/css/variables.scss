@@ -1,0 +1,15 @@
+$ff: 'Gilroy', sans-serif;
+$lh: 1.2;
+$bl: #000;
+$wh: #fff;
+$blue: #4D69A3;
+$lblue: #3498DB;
+$dblue: #1A429E;
+$gray: #A5A5A5;
+
+$maxWidth: 1920;
+@mixin adaptiv-font($pcSize, $mobSize) {
+ $addSize: $pcSize - $mobSize;
+ $maxWidth: $maxWidth - 320;
+ font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
