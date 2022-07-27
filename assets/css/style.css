@@ -814,6 +814,10 @@ body.hidden {
   .features .swiper-pagination-progressbar {
     width: 300px !important; } }
 
+@media (max-width: 376px) {
+  .contact .btn {
+    width: 100%; } }
+
 @media (max-width: 374px) {
   .footer .nav {
     margin: 30px 0; }

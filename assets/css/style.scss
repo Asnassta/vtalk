@@ -371,7 +371,6 @@ body.hidden {
 		}
 	}
 	&__item {
-		//width: 458px;
 		height: 644px;
 		background: rgba(26, 66, 158, 0.106);
 		box-shadow: inset 46.3333px -46.3333px 46.3333px rgba(20, 50, 120, 0.106), inset -46.3333px 46.3333px 46.3333px rgba(255, 255, 255, 0.106);
@@ -852,6 +851,14 @@ body.hidden {
 		}
 		.swiper-pagination-progressbar {
 			width: 300px!important;
+		}
+	}
+}
+
+@media(max-width: 376px) {
+	.contact {
+		.btn {
+			width: 100%;
 		}
 	}
 }
