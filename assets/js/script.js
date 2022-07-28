@@ -10,5 +10,6 @@ new Swiper('.features__slider', {
 new Swiper('.roadmap__slider', {
 	slidesPerView: 'auto',
 	watchOverflow: true,
+	initialSlide: 5,
 });
 
