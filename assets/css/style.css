@@ -407,7 +407,7 @@ body.hidden {
       bottom: -55px; }
     .features__slide:nth-child(3) .features__photo {
       bottom: -15px; }
-    .features__slide:nth-child(2) .features__photo, .features__slide:nth-child(5) .features__photo {
+    .features__slide:nth-child(3) .features__photo, .features__slide:nth-child(6) .features__photo {
       width: 85%; }
   .features__box {
     padding-bottom: 85px; }
@@ -846,6 +846,8 @@ body.hidden {
       padding-left: 20px; }
       .features__slide:first-child .features__photo {
         bottom: -30px; }
+    .features__slide:nth-child(2) .features__photo, .features__slide:nth-child(4) .features__photo {
+      bottom: -30px; }
   .features__item {
     height: 500px; }
     .features__item .title {

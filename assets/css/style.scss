@@ -374,7 +374,7 @@ body.hidden {
 				bottom: -15px;
 			}
 		}
-		&:nth-child(2), &:nth-child(5) {
+		&:nth-child(3), &:nth-child(6) {
 			.features__photo {
 				width: 85%;
 			}
@@ -885,6 +885,11 @@ body.hidden {
 			padding: 0 20px;
 			&:first-child {
 				padding-left: 20px;
+				.features__photo {
+					bottom: -30px;
+				}
+			}
+			&:nth-child(2), &:nth-child(4) {
 				.features__photo {
 					bottom: -30px;
 				}
