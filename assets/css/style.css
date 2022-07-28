@@ -364,6 +364,38 @@ body.hidden {
     top: 292px;
     left: -221px;
     z-index: -1; }
+  .features .slick-list {
+    padding-right: 90px; }
+  .features .slick-dots {
+    height: 10px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 440px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 33;
+    background: #5079C0;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border-radius: 24px; }
+    .features .slick-dots li {
+      width: 33.33333%; }
+      .features .slick-dots li button {
+        display: block;
+        width: 100%;
+        background: transparent;
+        height: 10px;
+        font-size: 0;
+        color: transparent;
+        border-radius: 24px; }
+      .features .slick-dots li.slick-active button {
+        background: #fff; }
   .features__slider {
     margin-top: 50px; }
   .features__slide {
@@ -452,7 +484,7 @@ body.hidden {
   .roadmap .swiper-slide {
     width: 252px;
     padding-top: 130px;
-    margin-right: 26px; }
+    margin-right: 24px; }
     .roadmap .swiper-slide:last-child {
       margin-right: 0; }
   .roadmap__item {
@@ -698,7 +730,9 @@ body.hidden {
     padding: 80px 0 100px; }
     .intro__photo {
       width: 52%;
-      margin-right: 0; } }
+      margin-right: 0; }
+  .features .slick-list {
+    padding-right: 150px; } }
 
 @media (max-width: 992px) {
   .blog__inner {
@@ -718,7 +752,9 @@ body.hidden {
     padding: 20px; }
   .contact__photo {
     top: 0;
-    left: 44%; } }
+    left: 44%; }
+  .features .slick-list {
+    padding-right: 300px; } }
 
 @media (max-width: 860px) {
   .intro__info {
@@ -793,7 +829,11 @@ body.hidden {
     margin-top: -20%;
     margin-left: -10%; }
     .contact__photo img {
-      display: block; } }
+      display: block; }
+  .features .slick-list {
+    padding-right: 20%; }
+  .features .slick-dots {
+    width: 80%; } }
 
 @media (max-width: 546px) {
   .technologes__item {
@@ -818,6 +858,10 @@ body.hidden {
     width: 300px !important; }
   .footer .nav {
     margin: 30px 0; } }
+
+@media (max-width: 414px) {
+  .features .slick-list {
+    padding-right: 0; } }
 
 @media (max-width: 376px) {
   .contact .btn {
