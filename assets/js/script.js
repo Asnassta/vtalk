@@ -1,5 +1,5 @@
  
-$('.1swiper-wrapper').slick({
+$('.features__wrapper').slick({
 	dots: true,
 	infinite: false,
 	speed: 300,
@@ -32,7 +32,7 @@ $('.1swiper-wrapper').slick({
   let prevDeltaY = 0;
   
  
-$('.1swiper-wrapper').on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
+$('.features__wrapper').on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
 	cc = document.getElementsByTagName('ul')[0].getElementsByTagName('li').length
 	$('.features .slick-dots li').css('width', (100/cc)+'%' );
 });
@@ -41,7 +41,7 @@ $('.1swiper-wrapper').on('init reInit afterChange', function(event, slick, curre
   $(window).scroll(function(event) {
 
 	  st = $(this).scrollTop();
-	  fs1 = $('.1swiper-wrapper');
+	  fs1 = $('.features__wrapper');
 	  if (st > lastScrollTop)
 	  {
    
@@ -51,7 +51,7 @@ $('.1swiper-wrapper').on('init reInit afterChange', function(event, slick, curre
 			  wS = $(this).scrollTop();
 		  if (wS > (hT+hH-wH)){
 
-  $(".1swiper-wrapper").on('mousewheel DOMMouseScroll wheel', (function(e) {
+  $(".features__wrapper").on('mousewheel DOMMouseScroll wheel', (function(e) {
 	  let deltaY = e.originalEvent.deltaY;
 
 	
