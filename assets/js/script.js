@@ -11,7 +11,6 @@ $('.features__wrapper').slick({
      {
        breakpoint: 1431,
         settings: {
-            infinite: true,
             slidesToShow: 2,
             slidesToScroll: 1,
         }
@@ -19,7 +18,6 @@ $('.features__wrapper').slick({
       {
        breakpoint: 992,
         settings: {
-            infinite: true,
             slidesToShow: 1,
             slidesToScroll: 1,
         }
@@ -102,23 +100,6 @@ $('.features__wrapper').on('init reInit afterChange', function(event, slick, cur
  
 }});
 
-
-
-/*new Swiper('.features__slider', {
-	slidesPerView: 'auto',
-	slidesPerGroup: 1,
- 
- 
- 
-  	pagination: {
-    	el: '.swiper-pagination',
-    	type: 'progressbar',
-  	},
-	  mousewheel: {
-		releaseOnEdges: true,
-		sensetivity: 1,
-	  },
-});*/
 
 new Swiper('.roadmap__slider', {
 	slidesPerView: 'auto',

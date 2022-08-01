@@ -223,7 +223,11 @@
 		margin-bottom: 40px;
 	}
 	&__img {
+		width: 126px;
 		max-width: 100%;
+		img {
+			max-width: 100%;
+		}
 	}
 	&__foot {
 		background-color: #000102;
