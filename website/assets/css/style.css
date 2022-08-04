@@ -2286,7 +2286,6 @@ body.hidden {
         -webkit-box-direction: normal;
         -ms-flex-direction: row;
         flex-direction: row;
-        margin: 0 -15px;
         position: static; }
         .innovative__tabs-nav:before {
           display: none; }
