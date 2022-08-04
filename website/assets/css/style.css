@@ -2280,13 +2280,13 @@ body.hidden {
         width: 0;
         height: 0; }
       .innovative__tabs-nav {
-        width: auto;
+        width: calc(100% + 30px);
         overflow: auto;
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
         -ms-flex-direction: row;
         flex-direction: row;
-        position: static; }
+        margin: 0 -15px; }
         .innovative__tabs-nav:before {
           display: none; }
         .innovative__tabs-nav a {

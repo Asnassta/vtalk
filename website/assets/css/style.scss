@@ -1935,11 +1935,10 @@ body.hidden {
     		 	height: 0;
     		}
 			&-nav {
-				width: auto;
+				width: calc(100% + 30px);
 				overflow: auto;
 				flex-direction: row;
-				//margin: 0 -15px;
-				position: static;
+				margin: 0 -15px;
 				&:before {
 					display: none;
 				}
