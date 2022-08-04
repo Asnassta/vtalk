@@ -1933,12 +1933,12 @@ body.hidden {
 				overflow-x: auto;
 				flex-direction: row;
 				margin: 0 -15px;
-				-ms-overflow-style: none;
+				/*-ms-overflow-style: none;
     			scrollbar-width: none;
     			&::-webkit-scrollbar {
     			 	width: 0;
     			 	height: 0;
-    			}
+    			}*/
 				&:before {
 					display: none;
 				}

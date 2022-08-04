@@ -2282,11 +2282,12 @@ body.hidden {
         -ms-flex-direction: row;
         flex-direction: row;
         margin: 0 -15px;
-        -ms-overflow-style: none;
-        scrollbar-width: none; }
-        .innovative__tabs-nav::-webkit-scrollbar {
-          width: 0;
-          height: 0; }
+        /*-ms-overflow-style: none;
+    			scrollbar-width: none;
+    			&::-webkit-scrollbar {
+    			 	width: 0;
+    			 	height: 0;
+    			}*/ }
         .innovative__tabs-nav:before {
           display: none; }
         .innovative__tabs-nav a {
