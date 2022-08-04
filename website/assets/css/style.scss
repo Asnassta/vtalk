@@ -1935,17 +1935,18 @@ body.hidden {
     		 	height: 0;
     		}
 			&-nav {
-				width: 100%;
+				width: calc(100% + 30px);
 				overflow: auto;
+				flex: 1 1 auto;
 				flex-direction: row;
-				//margin: 0 -15px;
+				margin: 0 -15px;
 				&:before {
 					display: none;
 				}
 				a {
 					white-space: nowrap;
 					font-size: 12px;
-					padding: 15px;
+					padding: 25px 15px;
 					height: auto;
 					display: block;
 					&:before {
