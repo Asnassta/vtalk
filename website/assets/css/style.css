@@ -2281,12 +2281,13 @@ body.hidden {
         height: 0; }
       .innovative__tabs-nav {
         width: auto;
-        overflow-x: auto;
+        overflow: auto;
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
         -ms-flex-direction: row;
         flex-direction: row;
-        margin: 0 -15px; }
+        margin: 0 -15px;
+        position: static; }
         .innovative__tabs-nav:before {
           display: none; }
         .innovative__tabs-nav a {

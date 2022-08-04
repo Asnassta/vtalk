@@ -1936,9 +1936,10 @@ body.hidden {
     		}
 			&-nav {
 				width: auto;
-				overflow-x: auto;
+				overflow: auto;
 				flex-direction: row;
 				margin: 0 -15px;
+				position: static;
 				&:before {
 					display: none;
 				}
