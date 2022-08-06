@@ -60,19 +60,26 @@ $(document).ready(function() {
 /*=========/smooth scroll=============*/
 
 /*======Header-menu__links (dropdown)=============*/
-  $(".header-menu__drop").hover( function(event) {
-    event.preventDefault();
-    if ($(window).width() >= 1141){
+  $(".header-menu__drop span").on("click", function() {
+    if ($(window).width() >= 992){
       $(this).toggleClass("dropdown");
-      $(this).find(".header-menu__dropdown").slideToggle(333);   
+      $(".header-menu__drop span").not(this).removeClass('dropdown');
+      $(".header-menu__drop span").not(this).next().hide();
+      $(this).next().fadeToggle(333);   
+    }
+    else {
+      $(this).toggleClass("dropdown");
+      $(".header-menu__drop span").not(this).removeClass('dropdown');
+      $(".header-menu__drop span").not(this).next().slideUp();
+      $(this).next().slideToggle(333);
     }
   });
-  $(".header-menu__drop").on("click", function(event) {
-    event.preventDefault();
-    if ($(window).width() <= 1140){
-      $(this).toggleClass("dropdown");
-      $(this).find(".header-menu__dropdown").slideToggle(333);   
-    }
+
+  $(".header-menu__title").on("click", function() {
+    $(this).toggleClass("dropdown");
+    $(".header-menu__title").not(this).removeClass('dropdown');
+    $(".header-menu__title").not(this).next().slideUp();
+    $(this).next().slideToggle(333);   
   });
   /*==========/header-menu__links (dropdown)=========*/
 
