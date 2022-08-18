@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="icon" href="favicon.svg" type="image/svg+xml">
+	<script src="https://unpkg.com/wavesurfer.js/dist/wavesurfer.js"></script>
+	<script src="https://unpkg.com/wavesurfer.js/dist/plugin/wavesurfer.regions.js"></script>
+	<title>VTALK.ai</title>
+</head>
+<body>
+	<!--Sprite-->
+	<svg style="display: none;">
+		<symbol id="close-icon" viewBox="0 0 24 24">
+			<g>
+				<path d="M18.75 5.25L5.25 18.75"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M18.75 18.75L5.25 5.25"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="arrow-pagin" viewBox="0 0 7 12">
+			<g>
+				<path d="M6 11L1 6L6 1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="activity-icon" viewBox="0 0 24 24">
+			<g>
+				<path d="M2.25018 12H5.25018L9.00018 3.75L15.0002 19.5L18.7502 12H21.7502" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="dialogs-icon" viewBox="0 0 24 24">
+			<g>
+				<path d="M6.7109 13.5L3 16.5V4.5C3 4.30109 3.07902 4.11032 3.21967 3.96967C3.36032 3.82902 3.55109 3.75 3.75 3.75H15.75C15.9489 3.75 16.1397 3.82902 16.2803 3.96967C16.421 4.11032 16.5 4.30109 16.5 4.5V12.75C16.5 12.9489 16.421 13.1397 16.2803 13.2803C16.1397 13.421 15.9489 13.5 15.75 13.5H6.7109Z"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M7.5 13.5V17.25C7.5 17.4489 7.57902 17.6397 7.71967 17.7803C7.86032 17.921 8.05109 18 8.25 18H17.2891L21 21V9C21 8.80109 20.921 8.61032 20.7803 8.46967C20.6397 8.32902 20.4489 8.25 20.25 8.25H16.5"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="statistics-icon" viewBox="0 0 25 24">
+			<g>
+				<path d="M4.625 19.5V12.75H9.875"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M21.875 19.5H3.125"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M9.875 19.5V8.25H15.125"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M20.375 3.75H15.125V19.5H20.375V3.75Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="reporting-icon" viewBox="0 0 24 24">
+			<g>
+				<path d="M20.25 4.5H3.75C3.33579 4.5 3 4.83579 3 5.25V16.5C3 16.9142 3.33579 17.25 3.75 17.25H20.25C20.6642 17.25 21 16.9142 21 16.5V5.25C21 4.83579 20.6642 4.5 20.25 4.5Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M15 17.25L18 21" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M9 17.25L6 21" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M9 11.25V13.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M12 9.75V13.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M15 8.25V13.5"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M12 4.5V2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="campaigns-icon" viewBox="0 0 24 24">
+			<g>
+				<path d="M14.25 7.5V19.0986C14.25 19.2221 14.2805 19.3436 14.3387 19.4525C14.397 19.5614 14.4812 19.6542 14.584 19.7226L15.6145 20.4097C15.7145 20.4763 15.829 20.518 15.9485 20.5311C16.068 20.5443 16.1889 20.5285 16.301 20.4852C16.4131 20.4418 16.5131 20.3722 16.5927 20.2821C16.6722 20.192 16.729 20.0841 16.7581 19.9675L18 15" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M18 15C18.9946 15 19.9484 14.6049 20.6517 13.9016C21.3549 13.1984 21.75 12.2445 21.75 11.25C21.75 10.2554 21.3549 9.30159 20.6517 8.59833C19.9484 7.89507 18.9946 7.49998 18 7.49998H14.25C14.25 7.49998 9.14515 7.49998 4.23271 3.37989C4.12346 3.28794 3.99022 3.22909 3.84866 3.21027C3.70711 3.19146 3.56312 3.21345 3.43364 3.27367C3.30416 3.33389 3.19456 3.42983 3.11774 3.55021C3.04092 3.67059 3.00007 3.8104 3 3.9532V18.5468C3.00007 18.6896 3.04092 18.8294 3.11774 18.9498C3.19456 19.0701 3.30416 19.1661 3.43364 19.2263C3.56312 19.2865 3.70711 19.3085 3.84866 19.2897C3.99022 19.2709 4.12346 19.212 4.23271 19.1201C9.14515 15 14.25 15 14.25 15H18Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="configuration-icon" viewBox="0 0 24 24">
+			<g>
+				<path d="M17.343 3.47514L13.4091 7.40906L13.9394 10.0607L16.5911 10.591L20.525 6.65712L20.5254 6.65695C21.0123 7.80636 21.1288 9.07897 20.8585 10.2977C20.5883 11.5164 19.9448 12.6205 19.0177 13.4563C18.0906 14.2922 16.9259 14.8182 15.6859 14.9612C14.4458 15.1041 13.192 14.8569 12.099 14.2539L12.0991 14.2537L6.84106 20.341C6.41902 20.7626 5.84685 20.9993 5.25034 20.9991C4.65382 20.999 4.08179 20.7619 3.65999 20.3401C3.23819 19.9183 3.00115 19.3463 3.00098 18.7498C3.00081 18.1533 3.23752 17.5811 3.65908 17.1591L9.7464 11.9011L9.74627 11.9011C9.14326 10.8081 8.89603 9.55434 9.03897 8.31427C9.18191 7.07419 9.70793 5.90953 10.5438 4.98241C11.3796 4.05528 12.4838 3.41182 13.7025 3.1416C14.9211 2.87137 16.1938 2.98783 17.3432 3.47475L17.343 3.47514Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="intents-icon" viewBox="0 0 24 24">
+			<g>
+				<path d="M12.375 20.2493H4.46875C4.27813 20.2493 4.09531 20.1735 3.96052 20.0388C3.82573 19.904 3.75 19.7211 3.75 19.5305V11.6242C3.75 10.4916 3.97309 9.37004 4.40654 8.32361C4.83998 7.27718 5.4753 6.32637 6.2762 5.52547C7.0771 4.72456 8.02791 4.08925 9.07435 3.6558C10.1208 3.22236 11.2423 2.99927 12.375 2.99927H12.375C13.5077 2.99927 14.6292 3.22236 15.6756 3.65581C16.7221 4.08925 17.6729 4.72457 18.4738 5.52547C19.2747 6.32638 19.91 7.27719 20.3435 8.32362C20.7769 9.37006 21 10.4916 21 11.6243V11.6243C21 13.9118 20.0913 16.1056 18.4738 17.7231C16.8563 19.3406 14.6625 20.2493 12.375 20.2493Z"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M12.375 13.125C12.9963 13.125 13.5 12.6213 13.5 12C13.5 11.3787 12.9963 10.875 12.375 10.875C11.7537 10.875 11.25 11.3787 11.25 12C11.25 12.6213 11.7537 13.125 12.375 13.125Z"/>
+				<path d="M7.875 13.125C8.49632 13.125 9 12.6213 9 12C9 11.3787 8.49632 10.875 7.875 10.875C7.25368 10.875 6.75 11.3787 6.75 12C6.75 12.6213 7.25368 13.125 7.875 13.125Z"/>
+				<path d="M16.875 13.125C17.4963 13.125 18 12.6213 18 12C18 11.3787 17.4963 10.875 16.875 10.875C16.2537 10.875 15.75 11.3787 15.75 12C15.75 12.6213 16.2537 13.125 16.875 13.125Z"/>
+			</g>
+		</symbol>
+		<symbol id="entities-icon" viewBox="0 0 24 24">
+			<g>
+				<path d="M9 15.75C12.7279 15.75 15.75 12.7279 15.75 9C15.75 5.27208 12.7279 2.25 9 2.25C5.27208 2.25 2.25 5.27208 2.25 9C2.25 12.7279 5.27208 15.75 9 15.75Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M15 21.75C18.7279 21.75 21.75 18.7279 21.75 15C21.75 11.2721 18.7279 8.25 15 8.25C11.2721 8.25 8.25 11.2721 8.25 15C8.25 18.7279 11.2721 21.75 15 21.75Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M11.4861 9.23596L14.7643 12.5142" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M9.23584 11.4858L12.5141 14.7641"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="labels-icon" viewBox="0 0 25 24">
+			<g>
+				<path d="M11 4.5H5V10.5H11V4.5Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M20 4.5H14V10.5H20V4.5Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M11 13.5H5V19.5H11V13.5Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M20 13.5H14V19.5H20V13.5Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="training-icon" viewBox="0 0 25 24">
+			<g>
+				<path d="M5.75 16.5C8.23528 16.5 10.25 14.4853 10.25 12C10.25 9.51472 8.23528 7.5 5.75 7.5C3.26472 7.5 1.25 9.51472 1.25 12C1.25 14.4853 3.26472 16.5 5.75 16.5Z"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M19.25 16.5C21.7353 16.5 23.75 14.4853 23.75 12C23.75 9.51472 21.7353 7.5 19.25 7.5C16.7647 7.5 14.75 9.51472 14.75 12C14.75 14.4853 16.7647 16.5 19.25 16.5Z"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M5.75 16.5H19.25"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="designer-icon" viewBox="0 0 24 24">
+			<g>
+				<path d="M6.75 9.375H3C2.58579 9.375 2.25 9.71079 2.25 10.125V13.875C2.25 14.2892 2.58579 14.625 3 14.625H6.75C7.16421 14.625 7.5 14.2892 7.5 13.875V10.125C7.5 9.71079 7.16421 9.375 6.75 9.375Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M20.25 3.75H15.75C15.3358 3.75 15 4.08579 15 4.5V9C15 9.41421 15.3358 9.75 15.75 9.75H20.25C20.6642 9.75 21 9.41421 21 9V4.5C21 4.08579 20.6642 3.75 20.25 3.75Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M20.25 14.25H15.75C15.3358 14.25 15 14.5858 15 15V19.5C15 19.9142 15.3358 20.25 15.75 20.25H20.25C20.6642 20.25 21 19.9142 21 19.5V15C21 14.5858 20.6642 14.25 20.25 14.25Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M7.5 12H11.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M15 17.25H13.5C12.9033 17.25 12.331 17.0129 11.909 16.591C11.4871 16.169 11.25 15.5967 11.25 15V9C11.25 8.40326 11.4871 7.83097 11.909 7.40901C12.331 6.98705 12.9033 6.75 13.5 6.75H15" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="arrow-up" viewBox="0 0 16 16">
+			<g>
+				<path d="M4 12L12 4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M5.5 4H12V10.5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="arrow" viewBox="0 0 11 18">
+			<g>
+				<path d="M9 16.5L1.5 9L9 1.5" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+	</svg>
+
+	<div class="wrapper">
+		<div class="dashboard">
+			<div class="dashboard-menu show">
+				<div class="dashboard-menu__box">
+					<a href="#" class="dashboard-menu__logo">
+						<img src="assets/images/logo-bl.svg" alt="">
+					</a>
+					<div class="dashboard-menu__block">
+						<div class="dashboard-menu__title">Dashboard</div>
+						<div class="dashboard-menu__list">
+							<a href="#" class="dashboard-menu__link">
+								<svg>
+									<use xlink:href="#activity-icon"></use>
+								</svg>
+								<span>System Status</span>
+							</a>
+							<a href="#" class="dashboard-menu__link active">
+								<svg>
+									<use xlink:href="#dialogs-icon"></use>
+								</svg>
+								<span>Dialogs</span>
+							</a>
+							<a href="#" class="dashboard-menu__link">
+								<svg>
+									<use xlink:href="#statistics-icon"></use>
+								</svg>
+								<span>Statistics</span>
+							</a>
+							<a href="#" class="dashboard-menu__link">
+								<svg>
+									<use xlink:href="#reporting-icon"></use>
+								</svg>
+								<span>Reporting</span>
+							</a>
+						</div>
+					</div><!--/dashboard-menu__block-->
+					<div class="dashboard-menu__block purple">
+						<div class="dashboard-menu__title">Dialer</div>
+						<div class="dashboard-menu__list">
+							<a href="#" class="dashboard-menu__link">
+								<svg>
+									<use xlink:href="#campaigns-icon"></use>
+								</svg>
+								<span>Campaigns</span>
+							</a>
+							<a href="#" class="dashboard-menu__link">
+								<svg>
+									<use xlink:href="#configuration-icon"></use>
+								</svg>
+								<span>Configuration</span>
+							</a>
+						</div>
+					</div><!--/dashboard-menu__block-->
+					<div class="dashboard-menu__block blue">
+						<div class="dashboard-menu__title">AI & Neural</div>
+						<div class="dashboard-menu__list">
+							<a href="#" class="dashboard-menu__link">
+								<svg>
+									<use xlink:href="#intents-icon"></use>
+								</svg>
+								<span>Intents</span>
+							</a>
+							<a href="#" class="dashboard-menu__link">
+								<svg>
+									<use xlink:href="#entities-icon"></use>
+								</svg>
+								<span>Entities</span>
+							</a>
+							<a href="#" class="dashboard-menu__link">
+								<svg>
+									<use xlink:href="#labels-icon"></use>
+								</svg>
+								<span>Labels & Variables</span>
+							</a>
+							<a href="#" class="dashboard-menu__link">
+								<svg>
+									<use xlink:href="#training-icon"></use>
+								</svg>
+								<span>Training</span>
+							</a>
+						</div>
+					</div><!--/dashboard-menu__block-->
+					<div class="dashboard-menu__block green">
+						<div class="dashboard-menu__title">Create</div>
+						<div class="dashboard-menu__list">
+							<a href="#" class="dashboard-menu__link dashboard-menu__link-arrow">
+								<svg>
+									<use xlink:href="#designer-icon"></use>
+								</svg>
+								<span>Go to Designer</span>
+								<svg>
+									<use xlink:href="#arrow-up"></use>
+								</svg>
+							</a>
+						</div>
+					</div><!--/dashboard-menu__block-->
+				</div>
+				<div class="dashboard-team">
+					<div class="dashboard-team__item dashboard-team__drop">
+						<div class="dashboard-team__icon">
+							<img src="assets/images/dashboard/dariev-design.svg" alt="">
+						</div>
+						<div class="dashboard-team__info">
+							<div>
+								<div class="dashboard-team__name">Dariev Design</div>
+								<div class="dashboard-team__description">Presonal Plan</div>
+							</div>
+							<div class="dashboard-team__arrows">
+								<img src="assets/images/dashboard/arrow-small.svg" alt="">
+								<img src="assets/images/dashboard/arrow-small.svg" alt="">
+							</div>
+						</div>
+					</div><!--/dashboard-team__drop-->
+					<div class="dashboard-team__dropbox show">
+						<div class="dashboard-team__item">
+							<div class="dashboard-team__icon">
+								<img src="assets/images/dashboard/vtalk-plan.svg" alt="">
+							</div>
+							<div class="dashboard-team__info">
+								<div>
+									<div class="dashboard-team__name">Vtalk.ai Official</div>
+									<div class="dashboard-team__description">Team Plan</div>
+								</div>
+							</div>
+						</div><!--/dashboard-team__item-->
+						<div class="dashboard-team__item checked">
+							<div class="dashboard-team__icon">
+								<img src="assets/images/dashboard/dariev-design.svg" alt="">
+							</div>
+							<div class="dashboard-team__info">
+								<div>
+									<div class="dashboard-team__name">Dariev Design</div>
+									<div class="dashboard-team__description">Presonal Plan</div>
+								</div>
+							</div>
+						</div><!--/dashboard-team__item-->
+					</div><!--/dashboard-team__dropbox-->
+				</div><!--/dashboard-team-->
+			</div><!--/dashboard-menu-->
+			<div class="dashboard-content">
+				<header class="dashboard-header">
+					<h1 class="dashboard-header__title">
+						<img src="assets/images/dashboard/dialogs-icon_head.svg" alt="">
+						<span>Dialogs</span>
+					</h1>
+					<div class="dashboard-header__menu">
+						<a href="#" class="dashboard-btn">Train</a>
+						<a href="#" class="dashboard-account">
+							<div class="dashboard-account__info">
+								<div class="dashboard-account__name">Renee Mckelvey</div>
+								<div class="dashboard-account__description">Account Settings</div>
+							</div>
+							<div class="dashboard-account__icon">
+								<img src="assets/images/dashboard/account-icon.png" alt="">
+							</div>
+						</a>
+						<div class="burger active">
+							<span class="burger__item"></span>
+						</div><!--/burger-->
+					</div>
+				</header><!--/dashboard-header-->
+				<main>
+					<div class="filters">
+						<div class="filters__item">
+							<a href="#" class="filters-date filled">
+								<div class="filters__description">Start date</div>
+								<div class="filters-date__input">
+									<span>06-08-2022</span>
+									<span>01:41 PM</span>
+								</div>
+							</a>
+						</div>
+						<div class="filters__item">
+							<a href="#" class="filters-date">
+								<div class="filters__description">End date</div>
+								<div class="filters-date__input">
+									<span>DD-MM-YYYY</span>
+									<span>HH:MM</span>
+								</div>
+							</a>
+						</div>
+						<div class="filters__item">
+							<div class="filters__input">
+								<div class="filters-phone">
+									<div class="filters-phone__country">
+										<img src="assets/images/flag-ukraine.svg" alt="">
+										<span>+380</span>
+									</div>
+									<input id="filters-number" type="text" placeholder="XXX XXX XXX">
+									<label for="filters-number" class="filters__description">Phone Number</label>
+								</div>
+							</div>
+						</div>
+						<div class="filters__item filters__item_big">
+							<div class="filters__input">
+								<input id="filters-tags" type="text">
+								<label for="filters-tags" class="filters__description">Conversation tags</label>
+							</div>
+						</div>
+						<div class="filters__item filters__item_auto">
+							<div class="filters__input">
+								<input id="filters-keywords" type="text">
+								<label for="filters-keywords" class="filters__description">Conversation keywords</label>
+							</div>
+						</div>
+						<div class="filters__item filters__switch">
+							<div class="filters__description">Live</div>
+							<div class="switch active">
+								<input type="checkbox">
+							</div>
+						</div>
+						<div class="filters__item filters__item_center">
+							<a href="#" class="dashboard-btn">Search</a>
+						</div>
+					</div><!--/filters-->
+					<div class="dashboard-block">
+						<div class="dashboard-block__head">
+							<h2 class="dashboard-block__title">Search Results</h2>
+							<a href="#" class="refresh-btn">
+								<img src="assets/images/dashboard/refresh-icon.svg" alt="">
+								<span>Refresh</span>
+							</a>
+						</div>
+						<div class="dashboard-table">
+							<div class="dashboard-table__header dashboard-table__row">
+								<div class="dashboard-table__col">
+									<div class="dashboard-table__title">contact name</div>
+								</div>
+								<div class="dashboard-table__col">
+									<div class="dashboard-table__title">datetime</div>
+								</div>
+								<div class="dashboard-table__col">
+									<div class="dashboard-table__title">phone number</div>
+								</div>
+								<div class="dashboard-table__col">
+									<div class="dashboard-table__title">labels</div>
+								</div>
+								<div class="dashboard-table__col">
+									<div class="dashboard-table__title">duration</div>
+								</div>
+								<div class="dashboard-table__col">
+									<div class="dashboard-table__title">status</div>
+								</div>
+							</div>
+							<div class="dashboard-table__content">
+								<div class="dashboard-table-load show">
+									<div class="dashboard-table-load__icon">
+										<img src="assets/images/dashboard/close-gray.svg" alt="">
+										<div class="dashboard-table-load__loader">
+											<img src="assets/images/dashboard/loader-icon.svg" alt="">
+										</div>
+									</div>
+								</div><!--/dashboard-table-load-->
+								<div class="dashboard-table__row">
+									<div class="dashboard-table__col">
+										<div class="dashboard-table__title">contact name</div>
+										<div class="dashboard-table__info">Omar Stanton</div>
+									</div>
+									<div class="dashboard-table__col">
+										<div class="dashboard-table__title">datetime</div>
+										<div class="dashboard-table__info">
+											<span>06-08-2022</span>
+											<span>14:18:28</span>
+										</div>
+									</div>
+									<div class="dashboard-table__col">
+										<div class="dashboard-table__title">phone number</div>
+										<div class="dashboard-table__info">+38 012-345-67-89</div>
+									</div>
+									<div class="dashboard-table__col">
+										<div class="dashboard-table__title">labels</div>
+										<div class="dashboard__labels">
+											<div class="dashboard-tag blue">Verified</div>
+											<div class="dashboard-tag green">Agree</div>
+											<div class="dashboard-tag purple">SMS</div>
+										</div>
+									</div>
+									<div class="dashboard-table__col">
+										<div class="dashboard-table__title">duration</div>
+										<div class="dashboard-table__info dashboard-table__info_flex">
+											<span>00:01:54</span>
+											<div class="broadcast">
+												<svg viewBox="0 0 32 32">
+													<path d="M16 20C18.2091 20 20 18.2091 20 16C20 13.7909 18.2091 12 16 12C13.7909 12 12 13.7909 12 16C12 18.2091 13.7909 20 16 20Z" stroke="#3498DB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+													<path d="M9.63605 22.3639C8.79941 21.5287 8.13566 20.5367 7.6828 19.4447C7.22993 18.3527 6.99683 17.1821 6.99683 15.9999C6.99683 14.8178 7.22993 13.6472 7.6828 12.5552C8.13566 11.4632 8.79941 10.4712 9.63605 9.63599" stroke="#3498DB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+													<path d="M22.364 9.63599C23.2006 10.4712 23.8643 11.4632 24.3172 12.5552C24.7701 13.6472 25.0032 14.8178 25.0032 15.9999C25.0032 17.1821 24.7701 18.3527 24.3172 19.4447C23.8643 20.5367 23.2006 21.5287 22.364 22.3639" stroke="#3498DB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+													<path d="M6.10052 25.8995C4.79907 24.6002 3.76658 23.0571 3.06212 21.3585C2.35766 19.6598 1.99506 17.8389 1.99506 16C1.99506 14.161 2.35766 12.3401 3.06212 10.6414C3.76658 8.94278 4.79907 7.39969 6.10052 6.10046" stroke="#3498DB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+													<path d="M25.8995 6.10046C27.2009 7.39969 28.2334 8.94278 28.9379 10.6414C29.6423 12.3401 30.0049 14.161 30.0049 16C30.0049 17.8389 29.6423 19.6598 28.9379 21.3585C28.2334 23.0571 27.2009 24.6002 25.8995 25.8995" stroke="#3498DB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+												</svg>
+											</div><!--/broadcast-->
+										</div>
+									</div>
+									<div class="dashboard-table__col">
+										<div class="dashboard-table__title">status</div>
+										<div class="dashboard__status">
+											<div class="dashboard-tag blue">In Progress</div>
+										</div>
+									</div>
+								</div><!--/dashboard-table__row-->
+								<div class="dashboard-table__row">
+									<div class="dashboard-table__col">
+										<div class="dashboard-table__title">contact name</div>
+										<div class="dashboard-table__info">Martin Rosser</div>
+									</div>
+									<div class="dashboard-table__col">
+										<div class="dashboard-table__title">datetime</div>
+										<div class="dashboard-table__info">
+											<span>06-08-2022</span>
+											<span>14:18:28</span>
+										</div>
+									</div>
+									<div class="dashboard-table__col">
+										<div class="dashboard-table__title">phone number</div>
+										<div class="dashboard-table__info">+38 012-345-67-89</div>
+									</div>
+									<div class="dashboard-table__col">
+										<div class="dashboard-table__title">labels</div>
+										<div class="dashboard__labels">
+											<div class="dashboard-tag">Dropped</div>
+											<div class="dashboard-tag orange">Deny</div>
+											<div class="dashboard-tag red">Wrong</div>
+										</div>
+									</div>
+									<div class="dashboard-table__col">
+										<div class="dashboard-table__title">duration</div>
+										<div class="dashboard-table__info dashboard-table__info_flex">
+											<span>00:01:54</span>
+										</div>
+									</div>
+									<div class="dashboard-table__col">
+										<div class="dashboard-table__title">status</div>
+										<div class="dashboard__status">
+											<div class="dashboard-tag scarlet">Canceled</div>
+										</div>
+									</div>
+								</div><!--/dashboard-table__row-->
+								<div class="dashboard-table__row">
+									<div class="dashboard-table__col">
+										<div class="dashboard-table__title">contact name</div>
+										<div class="dashboard-table__info">Kierra Donin</div>
+									</div>
+									<div class="dashboard-table__col">
+										<div class="dashboard-table__title">datetime</div>
+										<div class="dashboard-table__info">
+											<span>06-08-2022</span>
+											<span>14:18:28</span>
+										</div>
+									</div>
+									<div class="dashboard-table__col">
+										<div class="dashboard-table__title">phone number</div>
+										<div class="dashboard-table__info">+38 012-345-67-89</div>
+									</div>
+									<div class="dashboard-table__col">
+										<div class="dashboard-table__title">labels</div>
+										<div class="dashboard__labels">
+											<div class="dashboard-tag green">Agree</div>
+											<div class="dashboard-tag purple">SMS</div>
+										</div>
+									</div>
+									<div class="dashboard-table__col">
+										<div class="dashboard-table__title">duration</div>
+										<div class="dashboard-table__info dashboard-table__info_flex">
+											<span>00:01:54</span>
+										</div>
+									</div>
+									<div class="dashboard-table__col">
+										<div class="dashboard-table__title">status</div>
+										<div class="dashboard__status">
+											<div class="dashboard-tag green">Finished</div>
+										</div>
+									</div>
+								</div><!--/dashboard-table__row-->
+								<div class="dashboard-table__row">
+									<div class="dashboard-table__col">
+										<div class="dashboard-table__title">contact name</div>
+										<div class="dashboard-table__info">Mira Rosser</div>
+									</div>
+									<div class="dashboard-table__col">
+										<div class="dashboard-table__title">datetime</div>
+										<div class="dashboard-table__info">
+											<span>06-08-2022</span>
+											<span>14:18:28</span>
+										</div>
+									</div>
+									<div class="dashboard-table__col">
+										<div class="dashboard-table__title">phone number</div>
+										<div class="dashboard-table__info">+38 012-345-67-89</div>
+									</div>
+									<div class="dashboard-table__col">
+										<div class="dashboard-table__title">labels</div>
+										<div class="dashboard__labels">
+											<div class="dashboard-tag blue">Verified</div>
+											<div class="dashboard-tag green">Agree</div>
+											<div class="dashboard-tag purple">SMS</div>
+										</div>
+									</div>
+									<div class="dashboard-table__col">
+										<div class="dashboard-table__title">duration</div>
+										<div class="dashboard-table__info dashboard-table__info_flex">
+											<span>00:01:54</span>
+											<div class="broadcast">
+												<svg viewBox="0 0 32 32">
+													<path d="M16 20C18.2091 20 20 18.2091 20 16C20 13.7909 18.2091 12 16 12C13.7909 12 12 13.7909 12 16C12 18.2091 13.7909 20 16 20Z" stroke="#3498DB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+													<path d="M9.63605 22.3639C8.79941 21.5287 8.13566 20.5367 7.6828 19.4447C7.22993 18.3527 6.99683 17.1821 6.99683 15.9999C6.99683 14.8178 7.22993 13.6472 7.6828 12.5552C8.13566 11.4632 8.79941 10.4712 9.63605 9.63599" stroke="#3498DB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+													<path d="M22.364 9.63599C23.2006 10.4712 23.8643 11.4632 24.3172 12.5552C24.7701 13.6472 25.0032 14.8178 25.0032 15.9999C25.0032 17.1821 24.7701 18.3527 24.3172 19.4447C23.8643 20.5367 23.2006 21.5287 22.364 22.3639" stroke="#3498DB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+													<path d="M6.10052 25.8995C4.79907 24.6002 3.76658 23.0571 3.06212 21.3585C2.35766 19.6598 1.99506 17.8389 1.99506 16C1.99506 14.161 2.35766 12.3401 3.06212 10.6414C3.76658 8.94278 4.79907 7.39969 6.10052 6.10046" stroke="#3498DB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+													<path d="M25.8995 6.10046C27.2009 7.39969 28.2334 8.94278 28.9379 10.6414C29.6423 12.3401 30.0049 14.161 30.0049 16C30.0049 17.8389 29.6423 19.6598 28.9379 21.3585C28.2334 23.0571 27.2009 24.6002 25.8995 25.8995" stroke="#3498DB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+												</svg>
+											</div><!--/broadcast-->
+										</div>
+									</div>
+									<div class="dashboard-table__col">
+										<div class="dashboard-table__title">status</div>
+										<div class="dashboard__status">
+											<div class="dashboard-tag blue">In Progress</div>
+										</div>
+									</div>
+								</div><!--/dashboard-table__row-->
+							</div>
+						</div><!--/dashboard-table-->
+						<div class="dashboard-pagin">
+							<a href="#" class="dashboard-pagin__link dashboard-pagin__link_prev disabled">
+								<svg>
+									<use xlink:href="#arrow-pagin"></use>
+								</svg>
+							</a>
+							<a href="#" class="dashboard-pagin__link active">1</a>
+							<a href="#" class="dashboard-pagin__link">2</a>
+							<a href="#" class="dashboard-pagin__link">...</a>
+							<a href="#" class="dashboard-pagin__link">9</a>
+							<a href="#" class="dashboard-pagin__link">10</a>
+							<a href="#" class="dashboard-pagin__link dashboard-pagin__link_next">
+								<svg>
+									<use xlink:href="#arrow-pagin"></use>
+								</svg>
+							</a>
+						</div><!--/dashboard-pagin-->
+					</div><!--/dashboard-block-->
+					<div class="dialogs show">
+						<a href="#" class="dialogs-close">
+							<svg>
+								<use xlink:href="#close-icon"></use>
+							</svg>
+						</a>
+						<div class="dialogs-info">
+							<div class="dialogs-info__filters">
+								<div class="dialogs-info__item">
+									<div class="filters__input">
+										<input id="dialogs-name" type="text" value="Martin Rosser">
+										<label for="dialogs-name" class="filters__description">Name</label>
+									</div>
+								</div>
+								<div class="dialogs-info__item">
+									<div class="filters__input">
+										<input id="dialogs-phone" type="text" value="+38 012-345-67-89">
+										<label for="dialogs-phone" class="filters__description">Phone Number</label>
+									</div>
+								</div>
+								<div class="dialogs-info__item">
+									<div class="filters__description">Call in Process</div>
+									<div class="dialogs-info__time">00:01:54</div>
+									<div class="dashboard-tag scarlet">Canceled</div>
+								</div>
+								<div class="dialogs-info__item">
+									<div class="filters__description">Conversation tags</div>
+									<div class="dialogs-info__tags">
+										<div class="dashboard-tag">Dropped</div>
+										<div class="dashboard-tag orange">Deny</div>
+										<div class="dashboard-tag red">Wrong</div>
+									</div>
+								</div>
+							</div>
+						</div><!--/dialogs-info-->
+						<div class="dialogs-player">
+							<div class="dialogs-player__panel">
+								<div class="dialogs-player__control">
+									<div class="dialogs-player__play" onclick="wavesurfer.playPause()">
+										<img class="play" src="assets/images/dashboard/play.svg" alt="">
+										<img class="pause" style="display:none; width:44px;height: 44px;"  src="assets/images/dashboard/pause-button.svg" alt="">
+									</div>
+									<div class="dialogs-player__line">
+										<div id="waveform"></div>
+										<script>
+										document.addEventListener('DOMContentLoaded', function() {
+										    // Init
+										    wavesurfer = WaveSurfer.create({
+										        container: document.querySelector('#waveform'),
+										        waveColor: 'rgb(223 223 225)',
+												
+										        progressColor: '#8b8b8d',
+												barWidth: 3,
+										        mediaControls: true
+										    });
+										
+											function prepare_dur(v)
+											{
+												timestamp = parseInt(v);
+												var hours = Math.floor(timestamp / 60 / 60);
+												if(hours == 0)
+												{
+													hours = '00'
+												}
+										
+												// 37
+												var minutes = Math.floor(timestamp / 60) - (hours * 60);
+												m = '';
+												
+												// 42
+												var seconds = timestamp % 60;
+												s = ''
+												if(seconds < 10)
+												{
+													s = 0;
+												}
+												if(minutes < 10)
+												{
+													m = 0;
+												}
+												var formatted = hours + ':' + m+minutes + ':' + s+seconds;
+												return formatted;
+											}
+										
+											wavesurfer.on('audioprocess', function() {
+										  if (wavesurfer.isPlaying()) {
+										  
+												document.getElementById('nowdur').innerHTML = prepare_dur(wavesurfer.getCurrentTime());
+												document.getElementById('totaldur').innerHTML = prepare_dur(wavesurfer.getDuration());
+										 
+										  }
+										});
+										
+										
+										    wavesurfer.once('ready', function() {
+										        console.log('Using wavesurfer.js ' + WaveSurfer.VERSION);
+												document.getElementById('totaldur').innerHTML = prepare_dur(wavesurfer.getDuration());
+										    });
+										
+										    wavesurfer.on('error', function(e) {
+										        console.warn(e);
+										    });
+
+										    wavesurfer.load('demo.wav');
+ 
+											wavesurfer.on('pause', function () {
+												document.querySelector('.dialogs-player__play .play').style.display = 'block';
+												document.querySelector('.dialogs-player__play .pause').style.display = 'none';
+										});
+										wavesurfer.on('play', function () {
+											document.querySelector('.dialogs-player__play .pause').style.display = 'block';
+											document.querySelector('.dialogs-player__play .play').style.display = 'none';
+										});
+										
+										});
+										</script>
+									</div>
+									<div class="dur">
+										<div class="now" id="nowdur">00:00:00</div>
+										<div class="total" id="totaldur">00:00:00</div>
+									</div>
+								</div>
+							</div>
+							<div class="dialogs-player__messages">
+								<div class="dialogs-player__message">
+									<a href="#">Hello!</a>
+								</div>
+								<div class="dialogs-player__message">
+									<a href="#">Yes, hello</a>
+								</div>
+								<div class="dialogs-player__message">
+									<a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem fames lectus egestas mollis faucibus dolor nulla nam arcu?</a>
+								</div>
+								<div class="dialogs-player__message">
+									<a href="#">Are you going to pay?</a>
+								</div>
+								<div class="dialogs-player__message">
+									<a href="#">Is simply dummy text of the printing and typesetting industry</a>
+								</div>
+							</div>
+						</div><!--/dialogs-player-->
+						<div class="dialogs-data show">
+							<div class="dialogs-data__inner">
+								<a href="#" class="dialogs-data__hide">
+									<img src="assets/images/dashboard/arrow-right.svg" alt="">
+								</a>
+								<div class="dialogs-data__block">
+									<div class="dialogs-data__title">Debug mode</div>
+									<ul class="dialogs-data__list">
+										<li>
+											<span class="dialogs-data__name red">"sexType": </span>
+											<span class="dialogs-data__info">"N/A"</span>
+										</li>
+										<li>
+											<span class="dialogs-data__name blue">"lastName": </span>
+											<span class="dialogs-data__info">"adfs",</span>
+										</li>
+										<li>
+											<span class="dialogs-data__name green">"PartyType": </span>
+											<span class="dialogs-data__info">"1",</span>
+										</li>
+										<li>
+											<span class="dialogs-data__name">"actualDpd": </span>
+											<span class="dialogs-data__info">null,</span>
+										</li>
+										<li>
+											<span class="dialogs-data__name">"firstName": </span>
+											<span class="dialogs-data__info">"Василь",</span>
+										</li>
+										<li>
+											<span class="dialogs-data__name purple">"sexTypeId": </span>
+											<span class="dialogs-data__info">1,</span>
+										</li>
+										<li>
+											<span class="dialogs-data__name orange">"CallResult": </span>
+											<span class="dialogs-data__info">"12"</span>
+										</li>
+									</ul>
+								</div>
+								<div class="dialogs-data__block dialogs-data__block_scroll">
+									<div class="dialogs-data__text">
+										"rasa_nlu_data": {<br>
+ 										"common_examples": [<br>
+ 										{<br>
+ 										"text": "Hello",<br>
+ 										"intent": "greeting",<br>
+ 										"entities": []<br>
+ 										},<br>
+ 										{<br>
+ 										"text": "What would you like to have?",<br>
+ 										"rasa_nlu_data": {<br>
+ 										"common_examples": [<br>
+ 										{<br>
+ 										"text": "Hello",<br>
+ 										"intent": "greeting",<br>
+ 										"entities": []<br>
+ 										},<br>
+ 										{<br>
+ 										"text": "What would you like to have?",<br>
+									</div>
+								</div>
+							</div>
+						</div><!--/dialogs-data-->
+					</div><!--/dialogs-->
+				</main>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
