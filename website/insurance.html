@@ -259,12 +259,12 @@
 		<main class="main">
 			<section class="intro section">
 				<div class="intro__content">
-					<img src="assets/images/healthcare-intro.gif" alt="">
+					<img src="assets/images/insurance-intro.jpg" alt="">
 				</div>
 				<div class="intro__inner">
-					<h1 class="intro__title">AI-Based Virtual Voice Assistants for Healthcare</h1>
+					<h1 class="intro__title">Conversational AI for<br> Insurance – Voice Solutions</h1>
 					<div class="intro__description">
-						<p>vTalk.ai virtual voice assistants can provide a complete healthcare solution by assisting patients with tasks such as scheduling appointments, providing medical information, managing prescriptions, and connecting with healthcare providers.</p>
+						<p>vTalk.ai can help to decrease operational costs and provide 24/7 support improving overall customer satisfaction and reducing the workload for human customer service representatives.</p>
 					</div>
 					<div class="intro__control">
 						<a href="#" class="intro__btn">
@@ -273,16 +273,7 @@
 					</div>
 				</div>
 			</section><!--/intro-->
-			<div class="bg-grad">
-				<section class="info-block">
-					<div class="container container_940">
-						<h2 class="title-medium">Provide your patients with instant, timely, helpful healthcare</h2>
-						<div class="description">
-							<p>When Patients call in need of instant healthcare services from clinic and hospital staff, they find themselves waiting for countless hours because of operational activities and appointments already taking place within the system.</p>
-							<p>vTalk.ai healthcare virtual voice assistant is a low-cost patient engagement solution that helps to improve operational performance, ensuring customer satisfaction and saving healthcare staff a lot of time and effort.</p>
-						</div>
-					</div>
-				</section>
+			<div class="bg-grad decor-line">
 				<section class="customer customer-bottom customer_wh">
 					<div class="container">
 						<div class="customer-box customer-box_dialogue">
@@ -291,14 +282,14 @@
 									<div class="customer-box__icon">
 										<img src="assets/images/bank-icon_wh.svg" alt="">
 									</div>
-									<span>Healthcare</span>
+									<span>insurance</span>
 								</h3>
 							</div>
 							<div class="customer__tab tab-block tab_1">
 								<div class="customer__inner">
 									<div class="customer__info">
-										<div class="customer__title">Appointments scheduling</div>
-										<div class="customer__subtitle">vTalk.ai voice assistants allow patients to schedule appointments, provide reminders for upcoming appointments and reschedule or cancel appointments as needed. It can also help patients navigate the process of booking an appointment, answering any questions they might have, and verifying their insurance coverage.</div>
+										<div class="customer__title">Automate policy purchase</div>
+										<div class="customer__subtitle">vTalk.ai voice assistant can automate the policy purchase process for insurance by providing customers with information about different insurance products, helping them compare options, and guiding them through the purchase process with prompts and instructions. </div>
 									</div>
 									<div class="customer__content">
 										<div class="customer-dialogue">
@@ -306,14 +297,13 @@
 												<div class="dialogue__part dialogue__part_right">
 													<div class="dialogue__item">
 														<div class="dialogue__text">
-															<p>Hello! Can I schedule an appointment with Dr. <a href="#">Smith</a>?</p>
+															<p>I'm looking for a car insurance policy.</p>
 														</div>
 														<div class="dialogue__icon">
-															<img src="assets/images/girl_9.jpg" alt="">
+															<img src="assets/images/girl_6.jpg" alt="">
 														</div>
 													</div><!--/dialogue__item-->
-													<div class="dialogue__data">Intent: /schedule_appointment</div>
-													<div class="dialogue__data lpurple">Entity: doctor=”Smith”</div>
+													<div class="dialogue__data">Intent: /insurance_policy</div>
 												</div><!--/dialogue__part-->
 												<div class="dialogue__part dialogue__part">
 													<div class="dialogue__item">
@@ -321,21 +311,21 @@
 															<img src="assets/images/logo-grad.svg" alt="">
 														</div>
 														<div class="dialogue__text">
-															<p>Sure, what date and time suits you the best?</p>
+															<p>Great! I can assist you with purchasing a car insurance policy. Can you provide basic information, such as your name, address, car make and model?</p>
 														</div>
 													</div><!--/dialogue__item-->
 												</div><!--/dialogue__part-->
 												<div class="dialogue__part dialogue__part_right">
 													<div class="dialogue__item">
 														<div class="dialogue__text">
-															<p><a href="#">Thursday</a> at <a href="#">3 PM</a> would be great.</p>
+															<p>Yes, sure. My name is John Doe, I live at 123 Main St and drive a Honda Civic.</p>
 														</div>
 														<div class="dialogue__icon">
-															<img src="assets/images/girl_9.jpg" alt="">
+															<img src="assets/images/girl_6.jpg" alt="">
 														</div>
 													</div><!--/dialogue__item-->
-													<div class="dialogue__data lpurple">Entity: appointment_date=”Thu, 12-OCT-2021”, slot_time=”15:00”</div>
-													<div class="dialogue__data green">Action - API Call: create_appointment(“Smith”, ”Thu, 12-OCT-2021”, ”15:00”) - status OK</div>
+													<div class="dialogue__data lpurple">Entity: name=”John Doe”, address=”123 Main Street”, car=”Honda Civic”</div>
+													<div class="dialogue__data green">Action: Go to /available_products</div>
 												</div><!--/dialogue__part-->
 												<div class="dialogue__part dialogue__part">
 													<div class="dialogue__item">
@@ -343,7 +333,7 @@
 															<img src="assets/images/logo-grad.svg" alt="">
 														</div>
 														<div class="dialogue__text">
-															<p>I see that Dr. Smith is available at this time. So I booked an appointment for you on Thursday, the 12th of October at 3 PM.</p>
+															<p>Thank you! We have three levels of coverage: basic, standard, and premium. The basic coverage provides liability protection, while the standard and premium options offer additional options such as collision and comprehensive coverage.</p>
 														</div>
 													</div><!--/dialogue__item-->
 												</div><!--/dialogue__part-->
@@ -355,34 +345,22 @@
 							<div class="customer__tab tab-block tab_2">
 								<div class="customer__inner">
 									<div class="customer__info">
-										<div class="customer__title">Symptom checker</div>
-										<div class="customer__subtitle">A symptom checker is a tool that allows patients to input their symptoms and receive a list of possible conditions or illnesses that may be causing them. It can assist with self-diagnosis and triage and provide information about the next steps, such as seeking medical care or self-treatment options.</div>
+										<div class="customer__title">Simplify your claims management process</div>
+										<div class="customer__subtitle">An AI-based virtual voice assistant can assist with claims management for insurance by helping customers to file claims, tracking the status of their claims, and providing updates on the claims process. It can also assist with verifying coverage, collecting required documentation, and guiding the next steps.</div>
 									</div>
 									<div class="customer__content">
 										<div class="customer-dialogue">
 											<div class="dialogue">
-												<div class="dialogue__part dialogue__part">
-													<div class="dialogue__item">
-														<div class="dialogue__icon">
-															<img src="assets/images/logo-grad.svg" alt="">
-														</div>
-														<div class="dialogue__text">
-															<p> Hello, John. Could you please describe your symptoms?</p>
-														</div>
-													</div><!--/dialogue__item-->
-												</div><!--/dialogue__part-->
 												<div class="dialogue__part dialogue__part_right">
 													<div class="dialogue__item">
 														<div class="dialogue__text">
-															<p>Yes, I have a sudden <a href="#">high temperature</a>, an aching body, and a <a href="#">dry cough</a></p>
+															<p>Hi, I'd like to report a claim.</p>
 														</div>
 														<div class="dialogue__icon">
-															<img src="assets/images/man_3.jpg" alt="">
+															<img src="assets/images/girl_7.jpg" alt="">
 														</div>
 													</div><!--/dialogue__item-->
-													<div class="dialogue__data">Intent: /disease</div>
-													<div class="dialogue__data lpurple">Entity: symptoms=”high temperature”, cough_type=”dry cough”</div>
-													<div class="dialogue__data green">Action: Go to /flue</div>
+													<div class="dialogue__data">Intent: /claim</div>
 												</div><!--/dialogue__part-->
 												<div class="dialogue__part dialogue__part">
 													<div class="dialogue__item">
@@ -390,20 +368,31 @@
 															<img src="assets/images/logo-grad.svg" alt="">
 														</div>
 														<div class="dialogue__text">
-															<p>Based on the symptoms you describe, you most likely have the flu. I will now reconnect you to a relevant specialist to discuss the further steps. Please stay online, and wish you happy health, John.</p>
+															<p>Sure thing! Can you please provide me with your policy number and the claim details?</p>
 														</div>
 													</div><!--/dialogue__item-->
 												</div><!--/dialogue__part-->
 												<div class="dialogue__part dialogue__part_right">
 													<div class="dialogue__item">
 														<div class="dialogue__text">
-															<p> Thanks!</p>
+															<p> My policy number is <a href="#">12345</a> and I was in a car accident <a href="#">yesterday</a>.</p>
 														</div>
 														<div class="dialogue__icon">
-															<img src="assets/images/man_3.jpg" alt="">
+															<img src="assets/images/girl_7.jpg" alt="">
 														</div>
 													</div><!--/dialogue__item-->
-													<div class="dialogue__data green">Action: call_transfer(“flue”)</div>
+													<div class="dialogue__data lpurple">Entity: policy_number=”12345”, claim_type=”car accident”, claim_date=”2023-01-05”</div>
+													<div class="dialogue__data green">Action: Go to /claim_registration</div>
+												</div><!--/dialogue__part-->
+												<div class="dialogue__part dialogue__part">
+													<div class="dialogue__item">
+														<div class="dialogue__icon">
+															<img src="assets/images/logo-grad.svg" alt="">
+														</div>
+														<div class="dialogue__text">
+															<p>Thank you for the information. I'll start a claim for you right away. Can you please provide additional details, such as the accident's time, and location?</p>
+														</div>
+													</div><!--/dialogue__item-->
 												</div><!--/dialogue__part-->
 											</div><!--/dialogue-->
 										</div>
@@ -413,8 +402,8 @@
 							<div class="customer__tab tab-block tab_3">
 								<div class="customer__inner">
 									<div class="customer__info">
-										<div class="customer__title">Prescriptions management</div>
-										<div class="customer__subtitle">An AI-based virtual voice assistant can assist with managing prescriptions in healthcare by allowing patients to refill and renew their prescriptions, tracking delivery, and providing reminders for medication. It can also assist patients with finding pharmacies, checking prescription drug prices, and providing information about their medications' potential interactions and side effects.</div>
+										<div class="customer__title">Improve your customer service</div>
+										<div class="customer__subtitle">An AI-based virtual voice assistant can improve customer service in insurance by answering frequently asked questions, providing information on products and services, and assisting with customer service issues.  It can also automate repetitive tasks, such as policy changes, and proactively assist customers with personalized offers and recommendations.</div>
 									</div>
 									<div class="customer__content">
 										<div class="customer-dialogue">
@@ -422,13 +411,13 @@
 												<div class="dialogue__part dialogue__part_right">
 													<div class="dialogue__item">
 														<div class="dialogue__text">
-															<p>Hi, I'd like to check on the status of my prescription.</p>
+															<p>I would like to know the status of my recent claim.</p>
 														</div>
 														<div class="dialogue__icon">
-															<img src="assets/images/man_4.jpg" alt="">
+															<img src="assets/images/girl_8.jpg" alt="">
 														</div>
 													</div><!--/dialogue__item-->
-													<div class="dialogue__data">Intent: /check_status</div>
+													<div class="dialogue__data">Intent: /claim_status</div>
 												</div><!--/dialogue__part-->
 												<div class="dialogue__part dialogue__part">
 													<div class="dialogue__item">
@@ -436,21 +425,21 @@
 															<img src="assets/images/logo-grad.svg" alt="">
 														</div>
 														<div class="dialogue__text">
-															<p>Of course! Please provide me with your name and date of birth for verification purposes.</p>
+															<p>Sure thing! Please provide me with your policy number so I can look that up for you.</p>
 														</div>
 													</div><!--/dialogue__item-->
 												</div><!--/dialogue__part-->
 												<div class="dialogue__part dialogue__part_right">
 													<div class="dialogue__item">
 														<div class="dialogue__text">
-															<p>Sure, my name is <a href="#">John Doe</a> and my date of birth is <a href="#">01/01/1980</a>.</p>
+															<p>My policy number is <a href="#">12345</a>.</p>
 														</div>
 														<div class="dialogue__icon">
-															<img src="assets/images/man_4.jpg" alt="">
+															<img src="assets/images/girl_8.jpg" alt="">
 														</div>
 													</div><!--/dialogue__item-->
-													<div class="dialogue__data lpurple">Entity: name=”Jonh Doe”, birth_date=”01.01.1980”</div>
-													<div class="dialogue__data green">Action - API Call: check_prescription(“John Doe”, ”01.01.1980”) - status OK</div>
+													<div class="dialogue__data lpurple">Entity: policy_number=”12345”</div>
+													<div class="dialogue__data green">Action - API Call: get_claim(policy_number=”12345”) - status OK</div>
 												</div><!--/dialogue__part-->
 												<div class="dialogue__part dialogue__part">
 													<div class="dialogue__item">
@@ -458,7 +447,7 @@
 															<img src="assets/images/logo-grad.svg" alt="">
 														</div>
 														<div class="dialogue__text">
-															<p>Thank you, Mr. Doe. I have found your prescription. It was filled on the 5th of this month and should be ready for pickup at your preferred pharmacy. Is there anything else I can assist you with today?</p>
+															<p>Thank you. I see that your recent claim was processed and approved. Is there anything else you would like to know?</p>
 														</div>
 													</div><!--/dialogue__item-->
 												</div><!--/dialogue__part-->
@@ -470,23 +459,32 @@
 							<div class="customer__tab tab-block tab_4">
 								<div class="customer__inner">
 									<div class="customer__info">
-										<div class="customer__title">Claims management</div>
-										<div class="customer__subtitle">An AI-based virtual voice assistant can assist with healthcare claim management by automating the process of submitting claims, tracking claims status, and providing patients with updates on their claims and payments. It can also assist with verifying coverage, collecting required documentation, and guiding the next steps for denied claims.</div>
+										<div class="customer__title">Cross-sell coverage and proactive outreach</div>
+										<div class="customer__subtitle">vTalk.ai virtual voice assistant can assist with cross-selling coverage for insurance by identifying opportunities for customers to purchase additional products based on their needs and providing personalized recommendations. It can also provide proactive outreach to customers by identifying potential gaps in coverage and suggesting options to fill those gaps, improving customer satisfaction and retention.</div>
 									</div>
 									<div class="customer__content">
 										<div class="customer-dialogue">
 											<div class="dialogue">
+												<div class="dialogue__part dialogue__part">
+													<div class="dialogue__item">
+														<div class="dialogue__icon">
+															<img src="assets/images/logo-grad.svg" alt="">
+														</div>
+														<div class="dialogue__text">
+															<p>Hello John. I am calling from ABC Insurance company. We found that your policy has passed the due date for premium payment. Would you like to renew it now?</p>
+														</div>
+													</div><!--/dialogue__item-->
+												</div><!--/dialogue__part-->
 												<div class="dialogue__part dialogue__part_right">
 													<div class="dialogue__item">
 														<div class="dialogue__text">
-															<p>Hi, I need to file a claim for my recent hospital visit.</p>
+															<p>Thanks for reminding me. Yes, I want to renew my policy.</p>
 														</div>
 														<div class="dialogue__icon">
-															<img src="assets/images/girl_7.jpg" alt="">
+															<img src="assets/images/man_2.jpg" alt="">
 														</div>
 													</div><!--/dialogue__item-->
-													<div class="dialogue__data">Intent: /claim</div>
-													<div class="dialogue__data green">Action - API Call:check_claim(“current_phone_number”) - status OK</div>
+													<div class="dialogue__data">Intent: /affirm</div>
 												</div><!--/dialogue__part-->
 												<div class="dialogue__part dialogue__part">
 													<div class="dialogue__item">
@@ -494,31 +492,20 @@
 															<img src="assets/images/logo-grad.svg" alt="">
 														</div>
 														<div class="dialogue__text">
-															<p> I see that your claim has been received and is currently being processed. It may take up to 7 business days for the claim to be fully reviewed and a decision made.</p>
+															<p>Great. Would you like to make a payment now, or schedule a future payment?</p>
 														</div>
 													</div><!--/dialogue__item-->
 												</div><!--/dialogue__part-->
 												<div class="dialogue__part dialogue__part_right">
 													<div class="dialogue__item">
 														<div class="dialogue__text">
-															<p>Ok, thanks for the update. Can you send me a confirmation of the claim filing to my email address?</p>
+															<p>I would like to make a payment now.</p>
 														</div>
 														<div class="dialogue__icon">
-															<img src="assets/images/girl_7.jpg" alt="">
+															<img src="assets/images/man_2.jpg" alt="">
 														</div>
 													</div><!--/dialogue__item-->
-													<div class="dialogue__data">IntenIntent: /confirmation_requestt: /claim</div>
-													<div class="dialogue__data lpurple">Entity: channel=”email”</div>
-												</div><!--/dialogue__part-->
-												<div class="dialogue__part dialogue__part">
-													<div class="dialogue__item">
-														<div class="dialogue__icon">
-															<img src="assets/images/logo-grad.svg" alt="">
-														</div>
-														<div class="dialogue__text">
-															<p> Absolutely, I have sent a confirmation email to your registered email address. If you have further questions or concerns, please don't hesitate to reach out.</p>
-														</div>
-													</div><!--/dialogue__item-->
+													<div class="dialogue__data">Intent: /make_payment</div>
 												</div><!--/dialogue__part-->
 											</div><!--/dialogue-->
 										</div>
@@ -527,15 +514,57 @@
 							</div><!--/customer__tab-->
 							<div class="customer__navbox">
 								<div class="customer__tabs-nav tabs-nav">
-									<a href="#" onclick="javascript:tabDialogue(1);return false;" class="t1 active">Appointments scheduling</a>
-									<a href="#" onclick="javascript:tabDialogue(2);return false;"  class="t2">Symptom checker</a>
-									<a href="#" onclick="javascript:tabDialogue(3);return false;"  class="t3">Prescriptions management</a>
-									<a href="#" onclick="javascript:tabDialogue(4);return false;"  class="t4">Claims management</a>
+									<a href="#" onclick="javascript:tabDialogue(1);return false;" class="t1 active">Automate policy purchase</a>
+									<a href="#" onclick="javascript:tabDialogue(2);return false;"  class="t2">Claims Management</a>
+									<a href="#" onclick="javascript:tabDialogue(3);return false;"  class="t3">Customer service</a>
+									<a href="#" onclick="javascript:tabDialogue(4);return false;"  class="t4">Proactive outreach</a>
 								</div><!--/customer__tabs-nav-->
 							</div><!--/customer__navbox-->
 						</div><!--/customer-box-->
 					</div>
 				</section><!--/customer-->
+				<section class="features section">
+					<div class="container container_big">
+						<div class="features__inner">
+							<div class="features__item">
+								<div class="features__info">
+									<div class="features__title title-medium">Automated Repeated Query Process</div>
+									<div class="features__description description">Customers naturally want more information about their plans because of the variety and complexity of insurance products. Even with the aid of big contact centers, the total amount of these inquiries can be too much. vTalk virtual AI insurance agents help automate the most frequently requested inquiries. This solution enables the support teams to concentrate on more crucial duties and improve productivity.</div>
+								</div>
+								<div class="features__photo">
+									<img src="assets/images/features-photo_5.png" alt="">
+								</div>
+							</div><!--/features__item-->
+							<div class="features__item">
+								<div class="features__info">
+									<div class="features__title title-medium">Increased Efficiency of Call Center Operations</div>
+									<div class="features__description description">For insurance companies that employ big teams of customer service personnel in contact centers, the vTalk solution is the way out. AI-powered voice assistant for insurance helps to manage hundreds of live conversations simultaneously. By automating up to 80% of conversations, you can boost your Contact Center productivity by 250–450%</div>
+								</div>
+								<div class="features__photo">
+									<img src="assets/images/features-photo_6.png" alt="">
+								</div>
+							</div><!--/features__item-->
+							<div class="features__item">
+								<div class="features__info">
+									<div class="features__title title-medium">Make customers more satisfied with 24/7 support</div>
+									<div class="features__description description">vTalk virtual voice assistant can provide insurance agents solutions that function within and outside work hours, making it possible to attend to customers’ requests anytime. Along with the reliability, it can simultaneously deal with a large volume of calls, compared with the life assistants that can be tired, not in form, and exist (burnout) after a complicated conversation.</div>
+								</div>
+								<div class="features__photo">
+									<img src="assets/images/features-photo_7.png" alt="">
+								</div>
+							</div><!--/features__item-->
+							<div class="features__item">
+								<div class="features__info">
+									<div class="features__title title-medium">Cross-sell coverage and<br> proactive outreach</div>
+									<div class="features__description description">vTalk.ai virtual voice assistant can assist with cross-selling coverage for insurance by identifying opportunities for customers to purchase additional products based on their needs and providing personalized recommendations. It can also provide proactive outreach to customers by identifying potential gaps in coverage and suggesting options to fill those gaps, improving customer satisfaction and retention.</div>
+								</div>
+								<div class="features__photo">
+									<img src="assets/images/features-photo_8.png" alt="">
+								</div>
+							</div><!--/features__item-->
+						</div>
+					</div>
+				</section><!--/features-->
 				<section class="advantages">
 					<div class="container container_large">
 						<h2 class="title-block title-block_center">
@@ -601,46 +630,6 @@
 						</div>
 					</div>
 				</section><!--/advantages-->
-				<section class="advantages-check advantages-check_noicon">
-					<div class="container container_large">
-						<h2 class="title-block title-block_center">Virtual agents benefits for Healthcare</h2>
-						<div class="advantages-check__inner">
-							<div class="advantages-box">
-								<div class="advantages-box__info">
-									<div class="advantages-box__title">For your <span class="purple">patients</span></div>
-									<ul class="advantages-box__list">
-										<li>Consistent standards of service</li>
-										<li>Improved patient satisfaction</li>
-										<li>24/7 availability</li>
-										<li>Substitute contextual assistance for automated customer support.</li>
-									</ul>
-								</div>
-							</div><!--/advantages-box-->
-							<div class="advantages-box">
-								<div class="advantages-box__info">
-									<div class="advantages-box__title">For your <span class="green">emloyees</span></div>
-									<ul class="advantages-box__list">
-										<li>Better work comfort for front desk and admin employees</li>
-										<li>Opportunities to upskill </li>
-										<li>More meaningful tasks</li>
-										<li>Reduces the stress of managing everything in the highly draining healthcare system</li>
-									</ul>
-								</div>
-							</div><!--/advantages-box-->
-							<div class="advantages-box">
-								<div class="advantages-box__info">
-									<div class="advantages-box__title">For your <span class="pink">business</span></div>
-									<ul class="advantages-box__list">
-										<li>Cost optimization</li>
-										<li>Improved patient adherence</li>
-										<li>More profit without compromise of standards</li>
-										<li>Improved customer and business relationship</li>
-									</ul>
-								</div>
-							</div><!--/advantages-box-->
-						</div>
-					</div>
-				</section><!--/advantages-check-->
 			</div><!--/bg-grad-->
 			<section class="get-call">
 				<div class="container">
@@ -719,61 +708,61 @@
 					</div>
 				</div>
 			</section><!--/steps-->
-			<section class="advantages-ai mb-100 decor-line-pink">
-				<div class="container container_1600">
-					<h2 class="title-block title-block_center">The combination of AI and human capabilities for the best experience</h2>
-					<div class="advantages-ai__inner">
-						<div class="advantages-ai__boxes">
-							<div class="advantages-box">
-								<div class="advantages-box__icon-check">
-									<img src="assets/images/check-circle_pink.svg" alt="">
-								</div>
-								<div class="advantages-box__info">
-									<div class="advantages-box__title">Automation meets humanity</div>
-									<div class="advantages-box__text">AI voice-enabled virtual assistants for the medical field can't take the role of real-life conversation. They're made to let human agents quickly go forward from simple, straightforward, and sympathetic engagements to satisfy patients' rising demands for beneficial digital experiences.﻿</div>
-								</div>
-							</div><!--/advantages-box-->
-							<div class="advantages-box">
-								<div class="advantages-box__icon-check">
-									<img src="assets/images/check-circle_purple.svg" alt="">
-								</div>
-								<div class="advantages-box__info">
-									<div class="advantages-box__title">Data-driven business strategy enhancement</div>
-									<div class="advantages-box__text">Utilize an AI-based virtual voice assistant to gather and analyze patient data in healthcare, identifying trends and areas for improvement. Leverage its capabilities to identify new business opportunities, track performance, and make data-driven decisions that enhance overall business strategy and performance</div>
-								</div>
-							</div><!--/advantages-box-->
-							<div class="advantages-box">
-								<div class="advantages-box__icon-check">
-									<img src="assets/images/check-circle_green.svg" alt="">
-								</div>
-								<div class="advantages-box__info">
-									<div class="advantages-box__title">Increase revenue and conversions</div>
-									<div class="advantages-box__text">vTalk.ai voice assistant can increase revenue and conversion for healthcare by providing personalized recommendations and offers to customers, increasing the likelihood of them taking advantage of additional services and treatments.</div>
-								</div>
-							</div><!--/advantages-box-->
-							<div class="advantages-box">
-								<div class="advantages-box__icon-check">
-									<img src="assets/images/check-circle_blue.svg" alt="">
-								</div>
-								<div class="advantages-box__info">
-									<div class="advantages-box__title">The perfect blend of human and AI</div>
-									<div class="advantages-box__text">With easy customer interaction by switching from AI voice assistants solving most possible problems and switching to human agents whenever there is a need, we have a system that works perfectly, leading to complete customer satisfaction.</div>
-								</div>
-							</div><!--/advantages-box-->
-						</div>
-						<div class="advantages-ai__photo">
-							<img src="assets/images/people_2.png" alt="">
-						</div>
+			<section class="advantages-check section">
+				<div class="container">
+					<h2 class="title-block title-block_center">Virtual agents benefits for finance organizations</h2>
+					<div class="advantages-check__inner">
+						<div class="advantages-box">
+							<div class="advantages-box__icon-check">
+								<img src="assets/images/check-circle_pink.svg" alt="">
+							</div>
+							<div class="advantages-box__info">
+								<div class="advantages-box__title">For your customers</div>
+								<ul class="advantages-box__list">
+									<li>Reliable service standards</li>
+									<li>Improved customers satisfaction</li>
+									<li>24/7 availability</li>
+									<li>Zero call waiting time</li>
+								</ul>
+							</div>
+						</div><!--/advantages-box-->
+						<div class="advantages-box">
+							<div class="advantages-box__icon-check">
+								<img src="assets/images/check-circle_purple.svg" alt="">
+							</div>
+							<div class="advantages-box__info">
+								<div class="advantages-box__title">For your emloyees</div>
+								<ul class="advantages-box__list">
+									<li>Better work comfort for front-desk and admin employees</li>
+									<li>More meaningful tasks</li>
+									<li>Helps with proper work-life balance</li>
+								</ul>
+							</div>
+						</div><!--/advantages-box-->
+						<div class="advantages-box">
+							<div class="advantages-box__icon-check">
+								<img src="assets/images/check-circle_green.svg" alt="">
+							</div>
+							<div class="advantages-box__info">
+								<div class="advantages-box__title">For your business</div>
+								<ul class="advantages-box__list">
+									<li>Cost optimization</li>
+									<li>Improved customer experience</li>
+									<li>More profit without compromise of standards  and zero additional cost</li>
+									<li>Improved brand trust for business success</li>
+								</ul>
+							</div>
+						</div><!--/advantages-box-->
 					</div>
 				</div>
-			</section><!--/advantages-ai-->
+			</section><!--/advantages-check-->
 			<section class="faq">
 				<div class="container container_1170">
 					<h2 class="title-block title-block_center">Frequently asked questions</h2>
 					<div class="faq__inner">
 						<div class="faq__item">
 							<div class="faq__question">
-								<span> How is artificial intelligence AI being used in healthcare?</span>
+								<span> What can AI do for the insurance industry?</span>
 								<svg>
 									<use xlink:href="#arrow-down"></use>
 								</svg>
@@ -782,7 +771,7 @@
 						</div><!--/faq__item-->
 						<div class="faq__item">
 							<div class="faq__question">
-								<span>How can virtual voice assistants help in medicine and healthcare?</span>
+								<span>How can voice assistants help your insurance business?</span>
 								<svg>
 									<use xlink:href="#arrow-down"></use>
 								</svg>
@@ -791,21 +780,12 @@
 						</div><!--/faq__item-->
 						<div class="faq__item">
 							<div class="faq__question">
-								<span>What do I need to get started with vTalk.ai?</span>
+								<span>What is an insurance voice bot?</span>
 								<svg>
 									<use xlink:href="#arrow-down"></use>
 								</svg>
 							</div>
 							<div class="faq__answer">An insurance voice bot is a virtual voice agent used in the insurance company to attend to customers’ requests, automate repetitive processes, and increase productivity and customer experience. Because insurance voice bots can respond quickly, hands-free, and accurately, many firms are turning to its total use. With an insurance voice bot, customers do not need to wait several hours before getting a response, and insurers do not have to attend to calls and request all day.</div>
-						</div><!--/faq__item-->
-						<div class="faq__item">
-							<div class="faq__question">
-								<span>Are there any additional costs for setup and onboarding?</span>
-								<svg>
-									<use xlink:href="#arrow-down"></use>
-								</svg>
-							</div>
-							<div class="faq__answer">No, the setup and onboarding process is entirely free. vTalk.ai is the only company that offers such a service for all pricing plans, including Basic. This item is essential to our mission - to make virtual voice assistants available to everyone.</div>
 						</div><!--/faq__item-->
 					</div>
 				</div>
@@ -996,21 +976,5 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="assets/js/script.js"></script>
-	<script>
-		function  resvideo()
-		{
-			height = $('.intro__content').height();
-			 
-			$('#videoframe').attr('height', (height) +'px');
-		}
-		$(window).resize(function() {
-
-			resvideo();
-			
-			});
-			resvideo();
-
-	</script>
-
 </body>
 </html>
