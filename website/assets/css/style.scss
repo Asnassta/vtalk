@@ -735,6 +735,10 @@ body.hidden {
 			display: none;
 		}
 	}
+	.title-medium {
+		text-align: center;
+		margin-bottom: 30px;
+	}
 	.subtitle-block {
 		margin-bottom: 70px;
 	}
@@ -1154,6 +1158,20 @@ body.hidden {
 			}
 		}
 	}
+	&.customer-top {
+		.customer__tabs-nav {
+			width: 100%;
+			padding-right: 0;
+			text-align: center;
+			margin-bottom: 45px;
+		}
+		.customer__info {
+			padding: 0 60px 0 0;
+		}
+		.customer-box {
+			padding: 30px 60px 40px;
+		}
+	}
 }
 /*============/customer==============*/
 
@@ -1487,6 +1505,40 @@ body.hidden {
 	.subtitle-block {
 		max-width: 720px;
 	}
+	&_half {
+		.container {
+			max-width: 830px;
+		}
+		.advantages__inner {
+			margin-top: 75px;
+			margin-left: -54px;
+			>* {
+				width: calc(50% - 54px);
+				margin-left: 54px;
+			}
+		}
+	}
+	&_center {
+		.container {
+			max-width: 910px;
+		}
+		.advantages__inner {
+			margin-top: 70px;
+		}
+		.advantages-box {
+			flex-direction: column;
+			align-items: center;
+			&__icon {
+				margin-right: 0;
+				margin-bottom: 30px;
+			}
+			&__title {
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
 	&__inner {
 		margin-top: 90px;
 		display: flex;
@@ -1532,6 +1584,9 @@ body.hidden {
 				}
 				&-yellow {
 					box-shadow: 0px 23px 28px 8px rgba(255, 181, 38, 0.1);
+				}
+				&-dblue {
+					box-shadow: 0px 23px 28px 8px rgba(146, 158, 255, 0.1);
 				}
 			}
 			&-check {
@@ -1692,6 +1747,54 @@ body.hidden {
 /*============Advantages-check========*/
 .advantages-check {
 	margin-bottom: 20px;
+	&_line {
+		.title-block {
+			max-width: 100%;
+		}
+		.advantages-check__inner {
+			padding: 0;
+		}
+		.advantages-box {
+			padding-left: 28px;
+			position: relative;
+			&:before {
+				content: "";
+				width: 5px;
+				height: 100%;
+				border-radius: 45px;
+				background-color: #929EFF;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 1;
+			}
+			&:nth-child(2) {
+				&:before {
+					background-color: $green;
+				}
+			}
+			&:nth-child(3) {
+				&:before {
+					background-color:#2BC3F7;
+				}
+			}
+			&:nth-child(4) {
+				&:before {
+					background-color: #5E6FF9;
+				}
+			}
+			&:nth-child(5) {
+				&:before {
+					background-color: $yellow;
+				}
+			}
+			&:nth-child(6) {
+				&:before {
+					background-color: $d-purple;
+				}
+			}
+		}
+	}
 	&.advantages-check_noicon {
 		padding-bottom: 60px;
 		margin-bottom: 0;
@@ -1713,13 +1816,16 @@ body.hidden {
 	&__inner {
 		margin-top: 75px;
 		display: flex;
+		flex-wrap: wrap;
 		margin-left: -85px;
+		margin-bottom: -70px;
 		@media(min-width: 1400px) {
 			padding: 0 40px;
 		}
 		>* {
 			width: calc(33.33333% - 85px);
 			margin-left: 85px;
+			margin-bottom: 70px;
 		}
 	}
 }
@@ -1728,6 +1834,77 @@ body.hidden {
 /*==================Contact-us==========*/
 .contact-us {
 	margin-bottom: 50px;
+	&_about {
+		background-color: $bl2;
+		margin-bottom: 0;
+		padding: 60px 0 85px;
+		position: relative;
+		z-index: 1;
+		&:before {
+			content: "";
+			width: 165px;
+			height: 79px;
+			transform: rotate(90deg);
+			background: url("../images/dots-gradient.svg") center no-repeat;
+			position: absolute;
+			top: 32%;
+			left: 3%;
+			z-index: -1;
+		}
+		&:after {
+			content: "";
+			width: 165px;
+			height: 79px;
+			transform: rotate(90deg);
+			background: url("../images/dots-gradient.svg") center no-repeat;
+			position: absolute;
+			top: 14%;
+			right: 2%;
+			z-index: -1;
+		}
+		.container {
+			max-width: 1170px;
+		}
+		.contact-us__box {
+			padding: 0 100px;
+			&:before {
+				display: none;
+			}
+		}
+	}
+	&__map {
+		position: relative;
+		margin-bottom: 75px;
+		&-content {
+			border-radius: 29px;
+			overflow: hidden;
+			>* {
+				border-radius: 29px;
+				width: 100%;
+				min-height: 300px;
+				object-fit: cover;
+			}
+		}
+		&-box {
+			background: rgba(11, 13, 23, 0.8);
+			border-radius: 15px;
+			position: absolute;
+			bottom: 20px;
+			left: 20px;
+			padding: 30px 36px;
+			min-width: 28%;
+		}
+		&-info {
+			font-family: $ffsf;
+			font-size: 18px;
+			font-weight: 500;
+			color: $wh;
+			line-height: $lh-big;
+			a {
+				color: $blue;
+			}
+		}
+	}
 	&__box {
 		background-color: $bl2;
 		border-radius: 5px;
@@ -1746,11 +1923,80 @@ body.hidden {
 			z-index: -1;
 		}
 	}
+	.title-medium {
+		color: $wh;
+		margin-bottom: 60px;
+		text-align: center;
+	}
 	.title-block {
 		color: $wh;
 		margin-bottom: 40px;
 	}
 	&-form {
+		&.contact-us-form_new {
+			.contact-us-form__item {
+				margin-bottom: 26px;
+				input, textarea {
+					padding: 10px 15px;
+				}
+			}
+			.contact-us-form__agree {
+				max-width: 100%;
+			}
+			.contact-us-form__foot {
+				display: block;
+				text-align: center;
+			}
+			.contact-us-form__check {
+				text-align: left;
+				label {
+					font-variant: normal;
+					font-size: 16px;
+					align-items: center;
+					@media(max-width: 1920px) {
+						@include adaptiv-font(16, 12);
+					}
+					i {
+						color: $wh;
+						font-size: 16px;
+						@media(max-width: 1920px) {
+							@include adaptiv-font(16, 12);
+						}
+					}
+					a {
+						color: $wh;
+					}
+					span {
+						border-radius: 5px;
+						&:after {
+							transition: all 0s linear;
+							width: 14px;
+							height: 10px;
+							background: url("../images/check-dpurple.svg") center no-repeat;
+						}
+					}
+				}
+				input {
+					&:checked + label {
+						span {
+							background-color: $wh;
+						}
+					}
+				}
+			}
+			.btn-gradient {
+				padding: 15.5px 67.5px;
+				margin-top: 30px;
+				min-width: 31.5%;
+				background: $purple;
+				box-shadow: 0px 1px 3px rgba(42, 51, 66, 0.06), 0px 1px 2px rgba(42, 51, 66, 0.03);
+				border-radius: 6px;
+				&:hover {
+					background: linear-gradient(94.74deg, #929EFF -36.74%, #EF24FF 62.08%);
+					box-shadow: 0px 8px 57px rgba(255, 14, 255, 0.33);
+				}
+			}
+		}
 		&__inner {
 			display: flex;
 			flex-wrap: wrap;
@@ -1776,7 +2022,8 @@ body.hidden {
 			color: $black;
 			line-height: $lh;
 			&::placeholder {
-				opacity: 0.2;
+				opacity: 1;
+				color: #D8D8D8;
 			}
 		}
 		textarea {
@@ -1785,10 +2032,11 @@ body.hidden {
 		}
 		label {
 			display: inline-block;
-			margin-bottom: 11px;
+			margin-bottom: 14px;
 			font-family: $ffsf;
-			font-size: 18px;
+			font-size: 16px;
 			font-weight: 500;
+			font-variant: all-small-caps;
 			color: $wh;
 			line-height: $lh-big;
 			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -2662,6 +2910,11 @@ body.hidden {
 		}
 	}
 	.customer {
+		&__title {
+			br {
+				display: none;
+			}
+		}
 		&-box {
 			padding: 40px;
 			&__title {
@@ -2740,6 +2993,24 @@ body.hidden {
 					width: 100%;
 				}
 				.customer__tabs-nav {
+					width: 100%;
+				}
+			}
+		}
+		&.customer-top {
+			.customer-box {
+				padding: 30px;
+			}
+			.customer__tabs-nav {
+				margin-bottom: 15px;
+				text-align: left;
+			}
+			.customer-box_dialogue{
+				.customer__info{
+					width: 100%;
+					padding-right: 0;
+				}
+				.customer__content {
 					width: 100%;
 				}
 			}
@@ -3092,6 +3363,11 @@ body.hidden {
 	}
 	.advantages {
 		padding-bottom: 50px;
+		&_center {
+			.advantages__inner {
+				margin-top: 30px;
+			}
+		}
 		&-box {
 			&__icon {
 				width: 60px;
@@ -3127,6 +3403,23 @@ body.hidden {
 		margin-bottom: 50px;
 	}
 	.contact-us {
+		&_about {
+			padding: 40px 0;
+			.title-medium {
+				margin-bottom: 30px;
+			}
+			.contact-us__box {
+				padding: 0;
+			}
+		}
+		&__map {
+			&-box {
+				padding: 15px;
+			}
+			&-info {
+				font-size: 14px;
+			}
+		}
 		&-form {
 			&__foot {
 				flex-direction: column;
@@ -3244,6 +3537,9 @@ body.hidden {
 }
 
 @media(max-width: 546px) {
+	.main  {
+		padding-top: 73px;
+	}
 	.title-block {
 		font-size: 28px;
 	}
@@ -3273,6 +3569,21 @@ body.hidden {
 			img {
 				width: 100px;
 				margin: 0 3px;
+			}
+		}
+		&_half {
+			.advantages__inner {
+				margin-top: 30px;
+				margin-left: 0;
+				>* {
+					width: 100%;
+					margin-left: 0;
+				}
+			}
+			.advantages-box__text {
+				br {
+					display: none;
+				}
 			}
 		}
 		&__inner {
@@ -3312,6 +3623,12 @@ body.hidden {
 	.contact-us {
 		.title-block {
 			margin-bottom: 20px;
+		}
+		&_about {
+			.contact-us-form .btn-gradient {
+				min-width: 100%;
+				margin-top: 20px;
+			}
 		}
 		&__box {
 			padding: 30px;
@@ -3410,6 +3727,11 @@ body.hidden {
 		&-bottom {
 			.customer__info {
 				margin-bottom: 20px;
+			}
+		}
+		&.customer-top {
+			.customer-box {
+				padding: 30px 15px;
 			}
 		}
 	}

@@ -104,5 +104,11 @@ $(document).ready(function() {
     $(this).find(".faq__answer").slideToggle();
   });
   /*==========/FAQ=========*/
+
+  /*======Switch=============*/
+  $(".switch").on("click", function() {
+    $(this).toggleClass("active");
+  });
+  /*==========/switch=========*/
 	
 });
