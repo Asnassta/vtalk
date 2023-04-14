@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="icon" href="favicon.svg" type="image/svg+xml">
+	<title>VTALK.ai</title>
+</head>
+<body>
+	<!--Sprite-->
+	<svg style="display: none;">
+		<symbol id="arrow" viewBox="0 0 11 18">
+			<g>
+				<path d="M9 16.5L1.5 9L9 1.5" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="arrow-down" viewBox="0 0 24 24">
+			<g>
+				<path d="M19.5 9L12 16.5L4.5 9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+	</svg>
+	<div class="wrapper wrapper-wh">
+		<header class="header header-full">
+			<div class="container">
+				<div class="header__row">
+					<a href="/" class="header__logo">
+						<img src="assets/images/logo-bl.svg" alt="">
+					</a>
+					<nav class="header-menu">
+						<div class="header-menu__links">
+							<div class="header-menu__link header-menu__drop">
+								<span>Solutions</span>
+								<div class="header-menu__dropdown">
+									<div class="container">
+										<div class="header-menu__box">
+											<div class="header-menu__list">
+												<div class="header-menu__title"><i>By Industry</i></div>
+												<div class="header-menu__link-block">
+													<a href="banking.html" class="header-menu__item purple">
+														<div class="header-menu__icon">
+															<img src="assets/images/bank-icon_lpurple.svg" alt="">
+														</div>
+														<div class="header-menu__info">
+															<div class="header-menu__name">Banking</div>
+															<div class="header-menu__text">Enhance customer experience and reduce costs</div>
+														</div>
+													</a><!--/header-menu__item-->
+													<a href="healthcare.html" class="header-menu__item green">
+														<div class="header-menu__icon">
+															<img src="assets/images/health-icon.svg" alt="">
+														</div>
+														<div class="header-menu__info">
+															<div class="header-menu__name">Healthcare</div>
+															<div class="header-menu__text">Empower patients, and streamline care</div>
+														</div>
+													</a><!--/header-menu__item-->
+													<a href="ecommerce.html" class="header-menu__item blue">
+														<div class="header-menu__icon">
+															<img src="assets/images/browser-icon.svg" alt="">
+														</div>
+														<div class="header-menu__info">
+															<div class="header-menu__name">E-Commerce</div>
+															<div class="header-menu__text">Boost your e-commerce sales and customer satisfaction</div>
+														</div>
+													</a><!--/header-menu__item-->
+													<a href="travel.html" class="header-menu__item pink">
+														<div class="header-menu__icon">
+															<img src="assets/images/airplane-icon.svg" alt="">
+														</div>
+														<div class="header-menu__info">
+															<div class="header-menu__name">Travel & Hospitality</div>
+															<div class="header-menu__text">Enhance your guests’ and clients' experience</div>
+														</div>
+													</a><!--/header-menu__item-->
+													<a href="telecom.html" class="header-menu__item yellow">
+														<div class="header-menu__icon">
+															<img src="assets/images/broadcast-icon.svg" alt="">
+														</div>
+														<div class="header-menu__info">
+															<div class="header-menu__name">Telecom</div>
+															<div class="header-menu__text">Transform customer support with AI voice assistants</div>
+														</div>
+													</a><!--/header-menu__item-->
+													<a href="insurance.html" class="header-menu__item gray">
+														<div class="header-menu__icon">
+															<img src="assets/images/money-icon_gray.svg" alt="">
+														</div>
+														<div class="header-menu__info">
+															<div class="header-menu__name">Insurance</div>
+															<div class="header-menu__text">Upgrade your customer service and automate repetitive tasks</div>
+														</div>
+													</a><!--/header-menu__item-->
+												</div>
+											</div>
+											<div class="header-menu__list">
+												<div class="header-menu__title"><i>By Use Case</i></div>
+												<div class="header-menu__link-block">
+													<a href="outbound-call.html" class="header-menu__item purple">
+														<div class="header-menu__icon">
+															<img src="assets/images/phone-icon.svg" alt="">
+														</div>
+														<div class="header-menu__info">
+															<div class="header-menu__name">Outbound calls</div>
+															<div class="header-menu__text">Increase efficiency and decrease costs of outbound calls</div>
+														</div>
+													</a><!--/header-menu__item-->
+													<a href="support.html" class="header-menu__item green">
+														<div class="header-menu__icon">
+															<img src="assets/images/chat-icon_2.svg" alt="">
+														</div>
+														<div class="header-menu__info">
+															<div class="header-menu__name">Support automation</div>
+															<div class="header-menu__text">Resolve queries around the clock in any language</div>
+														</div>
+													</a><!--/header-menu__item-->
+													<a href="self-service.html" class="header-menu__item blue">
+														<div class="header-menu__icon">
+															<img src="assets/images/monitor-icon.svg" alt="">
+														</div>
+														<div class="header-menu__info">
+															<div class="header-menu__name">Self-service</div>
+															<div class="header-menu__text">Boost clients' satisfaction and save service costs</div>
+														</div>
+													</a><!--/header-menu__item-->
+													<a href="debt-collection.html" class="header-menu__item yellow">
+														<div class="header-menu__icon">
+															<img src="assets/images/coin-icon_yellow.svg" alt="">
+														</div>
+														<div class="header-menu__info">
+															<div class="header-menu__name">Debt Collection</div>
+															<div class="header-menu__text">Maximize debt recovery rates while minimizing expenses</div>
+														</div>
+													</a><!--/header-menu__item-->
+													<a href="billing.html" class="header-menu__item pink">
+														<div class="header-menu__icon">
+															<img src="assets/images/wallet-icon_pink.svg" alt="">
+														</div>
+														<div class="header-menu__info">
+															<div class="header-menu__name">Billing & Payments</div>
+															<div class="header-menu__text">Streamline your billing and payments process</div>
+														</div>
+													</a><!--/header-menu__item-->
+													<a href="reservation.html" class="header-menu__item gray">
+														<div class="header-menu__icon">
+															<img src="assets/images/calendar-icon_gray.svg" alt="">
+														</div>
+														<div class="header-menu__info">
+															<div class="header-menu__name">Reservation</div>
+															<div class="header-menu__text">Enhance customer experience and simplify the reservation process</div>
+														</div>
+													</a><!--/header-menu__item-->
+												</div>
+											</div>
+										</div>
+									</div>
+								</div><!--/header-menu__dropdown-->
+							</div>
+							<div class="header-menu__link header-menu__drop">
+								<span>Product</span>
+								<div class="header-menu__dropdown">
+									<div class="container">
+										<div class="header-menu__list header-menu__list_full">
+											<div class="header-menu__title"><i>Product</i></div>
+											<div class="header-menu__link-block header-menu__link-block_full">
+												<a href="create.html" class="header-menu__item purple">
+													<div class="header-menu__icon">
+														<img src="assets/images/pen-icon.svg" alt="">
+													</div>
+													<div class="header-menu__info">
+														<div class="header-menu__name">Create</div>
+														<div class="header-menu__text">Start creating your custom voice bots easily and quickly</div>
+													</div>
+												</a><!--/header-menu__item-->
+												<a href="train.html" class="header-menu__item green">
+													<div class="header-menu__icon">
+														<img src="assets/images/pen-icon_2.svg" alt="">
+													</div>
+													<div class="header-menu__info">
+														<div class="header-menu__name">Train</div>
+														<div class="header-menu__text">Optimize your voice bot's performance with targeted training</div>
+													</div>
+												</a><!--/header-menu__item-->
+												<a href="run.html" class="header-menu__item yellow">
+													<div class="header-menu__icon">
+														<img src="assets/images/chartline-icon_yellow.svg" alt="">
+													</div>
+													<div class="header-menu__info">
+														<div class="header-menu__name">Run</div>
+														<div class="header-menu__text">Use all the scope of vTalk.ai features to get the best result</div>
+													</div>
+												</a><!--/header-menu__item-->
+												<a href="analyze.html" class="header-menu__item blue">
+													<div class="header-menu__icon">
+														<img src="assets/images/chartbar-icon_blue.svg" alt="">
+													</div>
+													<div class="header-menu__info">
+														<div class="header-menu__name">Analyze</div>
+														<div class="header-menu__text">Analyze your voice bot conversations with detailed statistics </div>
+													</div>
+												</a><!--/header-menu__item-->
+												<a href="security.html" class="header-menu__item pink">
+													<div class="header-menu__icon">
+														<img src="assets/images/lock-icon.svg" alt="">
+													</div>
+													<div class="header-menu__info">
+														<div class="header-menu__name">Security</div>
+														<div class="header-menu__text">Ensuring safety through advanced security measures</div>
+													</div>
+												</a><!--/header-menu__item-->
+												<a href="pricing.html" class="header-menu__item gray">
+													<div class="header-menu__icon">
+														<img src="assets/images/dollar-icon.svg" alt="">
+													</div>
+													<div class="header-menu__info">
+														<div class="header-menu__name">Pricing</div>
+														<div class="header-menu__text">Transparent pricing for affordable voice automation</div>
+													</div>
+												</a><!--/header-menu__item-->
+												<a href="start.html" class="header-menu__item purple">
+													<div class="header-menu__icon">
+														<img src="assets/images/sign_in-icon.svg" alt="">
+													</div>
+													<div class="header-menu__info">
+														<div class="header-menu__name">How to Start</div>
+														<div class="header-menu__text">Get started easily with simple steps</div>
+													</div>
+												</a><!--/header-menu__item-->
+											</div>
+										</div>
+									</div>
+								</div><!--/header-menu__dropdown-->
+							</div>
+							<a href="blog-list.html" class="header-menu__link">
+								<span>Blog</span>
+							</a>
+							<a href="#" class="header-menu__link">
+								<span>Careers</span>
+							</a>
+							<a href="#" class="header-menu__link header-menu__link-login">
+							<span>Log In</span>
+						</a>
+						</div>
+					</nav>
+					<div class="header-menu__btns">
+						<a href="#" class="header-menu__link header-menu__link-login">
+							<span>Log In</span>
+						</a>
+						<a href="#" class="btn-gradient">Get Started</a>
+						<div class="burger">
+							<span class="burger__item"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header><!--/header-->
+
+		<main class="main ">
+			<section class="about-intro">
+				<div class="container">
+					<h1 class="title-big">We create a simple AI-powered voice assistant platform for your business growth</h1>
+					<div class="about-intro__photo">
+						<img src="assets/images/intents-note.png" alt="">
+					</div>
+				</div>
+			</section><!--/about-intro-->
+			<div class="bg-grad bg-grad_reverse pt-120">
+				<section class="about-who">
+					<div class="container">
+						<div class="about-who__inner">
+							<div class="about-who__info">
+								<h2 class="title-medium">Who we are?</h2>
+								<div class="description">
+									<p>vTalk.ai builds voice assistants that carry on natural conversations with customers to solve their problems. Our voice assistants understand customers, regardless of what they say or how they say it.</p>
+									<p>We serve companies where customer conversation is an important part of doing business. Our clients deploy vTalk.ai voice assistants to cut down on wait times and free up live staff to focus on calls requiring empathy and judgement. As a result, our enterprise clients see improved customer satisfaction, employee retention, and operational efficiency.</p>
+									<p>With the help of a well-designed NLP engine and appropriate human voice interpretation, you get a superhuman customer experience. vTalk recognizes male and female voices and will use such wordings when necessary.</p>
+								</div>
+							</div>
+							<div class="about-who__photo">
+								<img src="assets/images/zenbook.png" alt="">
+							</div>
+						</div>
+					</div>
+				</section><!--/about-who-->
+				<section class="features features_about">
+					<div class="container">
+						<div class="features__inner">
+							<div class="features__item">
+								<div class="features__info">
+									<h3 class="features__title title-medium">Our mission</h3>
+									<div class="features__description description">At our core, we strive to make the customer service experience seamless and user-friendly. By doing so, we enable businesses to offer top-notch support to their clients effortlessly. Our ultimate mission is to bridge the gap between customers and businesses, ensuring that every interaction is positive and productive.</div>
+								</div>
+								<div class="features__photo">
+									<img src="assets/images/features-photo_35.png" alt="">
+								</div>
+							</div><!--/features__item-->
+							<div class="features__item">
+								<div class="features__info">
+									<h3 class="features__title title-medium">Our vision</h3>
+									<div class="features__description description">Our vision is to help SMEs deliver high-quality customer service experiences across different industries. At vTalk.ai, we believe a good support experience is necessary for the smooth running of any business, leading to higher customer satisfaction. Thereby, we’ll keep innovating to achieve this goal.</div>
+								</div>
+								<div class="features__photo">
+									<img src="assets/images/features-photo_36.png" alt="">
+								</div>
+							</div><!--/features__item-->
+						</div>
+					</div>
+				</section><!--/features-->
+				<section class="advantages advantages_center">
+					<div class="container">
+						<h2 class="title-medium title-block_center">Our Values</h2>
+						<div class="advantages__inner">
+							<div class="advantages-box">
+								<div class="advantages-box__icon shadow-green">
+									<img src="assets/images/cap-icon.svg" alt="">
+								</div>
+								<div class="advantages-box__info">
+									<div class="advantages-box__title">Passion for top-quality</div>
+								</div>
+							</div><!--/advantages-box-->
+							<div class="advantages-box">
+								<div class="advantages-box__icon shadow-purple">
+									<img src="assets/images/atom-icon_purple.svg" alt="">
+								</div>
+								<div class="advantages-box__info">
+									<div class="advantages-box__title">Belief in innovation</div>
+								</div>
+							</div><!--/advantages-box-->
+							<div class="advantages-box">
+								<div class="advantages-box__icon shadow-dblue">
+									<img src="assets/images/handshake.svg" alt="">
+								</div>
+								<div class="advantages-box__info">
+									<div class="advantages-box__title">Clients come first</div>
+								</div>
+							</div><!--/advantages-box-->
+							<div class="advantages-box">
+								<div class="advantages-box__icon shadow-pink">
+									<img src="assets/images/thumbs-up.svg" alt="">
+								</div>
+								<div class="advantages-box__info">
+									<div class="advantages-box__title">Dignity and Respect</div>
+								</div>
+							</div><!--/advantages-box-->
+							<div class="advantages-box">
+								<div class="advantages-box__icon shadow-yellow">
+									<img src="assets/images/selection-foreground.svg" alt="">
+								</div>
+								<div class="advantages-box__info">
+									<div class="advantages-box__title">Transparency</div>
+								</div>
+							</div><!--/advantages-box-->
+							<div class="advantages-box">
+								<div class="advantages-box__icon shadow-blue">
+									<img src="assets/images/bounding-box.svg" alt="">
+								</div>
+								<div class="advantages-box__info">
+									<div class="advantages-box__title">Integrity</div>
+								</div>
+							</div><!--/advantages-box-->
+						</div>
+					</div>
+				</section><!--/advantages-->
+				<section class="advantages">
+					<div class="container container_large">
+						<h2 class="title-block title-block_center">
+							<span>Why </span>
+							<img src="assets/images/logo-bl.svg" alt="">
+							<span>?</span>
+						</h2>
+						<div class="advantages__inner">
+							<div class="advantages-box">
+								<div class="advantages-box__icon shadow-pink">
+									<img src="assets/images/rocket-icon_red.svg" alt="">
+								</div>
+								<div class="advantages-box__info">
+									<div class="advantages-box__title">Free Setup and launch</div>
+									<div class="advantages-box__text">The setup and installation of the AI-powered retail virtual voice assistant are free</div>
+								</div>
+							</div><!--/advantages-box-->
+							<div class="advantages-box">
+								<div class="advantages-box__icon shadow-purple">
+									<img src="assets/images/money-icon_purple.svg" alt="">
+								</div>
+								<div class="advantages-box__info">
+									<div class="advantages-box__title">3x Cost Reducing</div>
+									<div class="advantages-box__text">Save operating expenses and increase your productivity by automating typical procedures</div>
+								</div>
+							</div><!--/advantages-box-->
+							<div class="advantages-box">
+								<div class="advantages-box__icon shadow-green">
+									<img src="assets/images/calendar-icon.svg" alt="">
+								</div>
+								<div class="advantages-box__info">
+									<div class="advantages-box__title">Deployment Just in 1 Week</div>
+									<div class="advantages-box__text">Within a week, get your voice AI in Retail fully customized to your unique demands and deployed</div>
+								</div>
+							</div><!--/advantages-box-->
+							<div class="advantages-box">
+								<div class="advantages-box__icon shadow-blue">
+									<img src="assets/images/atom-icon_blue.svg" alt="">
+								</div>
+								<div class="advantages-box__info">
+									<div class="advantages-box__title">Proprietary NPL Engine</div>
+									<div class="advantages-box__text">Get all the benefits with a well-designed NLP engine with appropriate human voice interpretation</div>
+								</div>
+							</div><!--/advantages-box-->
+							<div class="advantages-box">
+								<div class="advantages-box__icon shadow-black">
+									<img src="assets/images/stack-icon.svg" alt="">
+								</div>
+								<div class="advantages-box__info">
+									<div class="advantages-box__title">No Code Development</div>
+									<div class="advantages-box__text">An enterprise-ready, no-code builder that makes it easier to create AI voice assistants for retail</div>
+								</div>
+							</div><!--/advantages-box-->
+							<div class="advantages-box">
+								<div class="advantages-box__icon shadow-yellow">
+									<img src="assets/images/code-icon_yellow.svg" alt="">
+								</div>
+								<div class="advantages-box__info">
+									<div class="advantages-box__title">Free API Integration with Any Service</div>
+									<div class="advantages-box__text">Our free API integration with any of your services enables business processes to operate correctly.</div>
+								</div>
+							</div><!--/advantages-box-->
+						</div>
+					</div>
+				</section><!--/advantages-->
+				<section class="contact-us contact-us_about">
+					<div class="container">
+						<h2 class="title-medium">Contacts</h2>
+						<div class="contact-us__map">
+							<div class="contact-us__map-content">
+								<img src="assets/images/map-place.png" alt="">
+							</div>
+							<div class="contact-us__map-box">
+								<div class="contact-us__map-info">
+									BRAINOVEX LTD<br>
+									7 Bell Yard,<br> 
+									London, England WC2A 2JR<br>
+									Email: <a href="mailto:info@vtalk.ai">info@vtalk.ai</a>
+								</div>
+							</div>
+						</div>
+						<div class="contact-us__box">
+							<h2 class="title-medium">Ready to get started?<br> Talk to us today</h2>
+							<form action="#" class="contact-us-form contact-us-form_new">
+								<div class="contact-us-form__inner">
+									<div class="contact-us-form__item">
+										<label for="contact-us-email">Business email*</label>
+										<input type="email" id="contact-us-email" placeholder="Business email">
+									</div>
+									<div class="contact-us-form__item">
+										<label for="contact-us-phone">Phone</label>
+										<input type="text" id="contact-us-phone" placeholder="Phone">
+									</div>
+									<div class="contact-us-form__item">
+										<label for="contact-us-name">Name*</label>
+										<input type="text" id="contact-us-name" placeholder="Name">
+									</div>
+									<div class="contact-us-form__item">
+										<label for="contact-us-company">Company</label>
+										<input type="text" id="contact-us-company" placeholder="Company">
+									</div>
+									<div class="contact-us-form__item contact-us-form__item-full">
+										<label for="contact-us-message">Enter your question</label>
+										<textarea id="contact-us-message" placeholder="Enter your question"></textarea>
+									</div>
+								</div>
+								<div class="contact-us-form__foot">
+									<div class="contact-us-form__agree">
+										<div class="contact-us-form__check">
+											<input type="checkbox" id="contact-us-form-check" checked required>
+											<label for="contact-us-form-check">
+												<span></span>
+												<i>By submitting this form, you agree to receive communication from VTalk.ai. For more information, please see our <a href="#">Privacy Policy</a></i>
+											</label>
+										</div>
+									</div>
+									<button class="btn-gradient" type="submit">Send</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</section><!--/contact-us-->
+			</div>
+		</main>
+
+		<footer class="footer">
+			<div class="footer__menu">
+				<div class="container">
+					<div class="footer-menu">
+						<div class="footer-menu__col">
+							<a href="#" class="footer-logo">
+								<img src="assets/images/logo-wh.svg" alt="">
+							</a>
+							<div class="footer__description">VTalk.ai is the full-stack AI-based<br> Voice Assistants platform that anyone can run</div>
+							<div class="footer__img">
+								<img src="assets/images/gdpr.png" alt="">
+							</div>
+						</div>
+						<div class="footer-menu__col">
+							<div class="footer-menu__title">Product</div>
+							<ul class="footer-menu__list">
+								<li>
+									<a href="#">Create</a>
+								</li>
+								<li>
+									<a href="#">Train</a>
+								</li>
+								<li>
+									<a href="#">Run</a>
+								</li>
+								<li>
+									<a href="#">Analyze</a>
+								</li>
+								<li>
+									<a href="#">Feautures</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer-menu__col">
+							<div class="footer-menu__title">Industies</div>
+							<ul class="footer-menu__list">
+								<li>
+									<a href="#">Finance</a>
+								</li>
+								<li>
+									<a href="#">E-Commerce</a>
+								</li>
+								<li>
+									<a href="#">Healthcare</a>
+								</li>
+								<li>
+									<a href="#">Logistics</a>
+								</li>
+								<li>
+									<a href="#">Travel & Hospitality</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer-menu__col">
+							<div class="footer-menu__title">Company</div>
+							<ul class="footer-menu__list">
+								<li>
+									<a href="#">About us</a>
+								</li>
+								<li>
+									<a href="#">Terms of Service</a>
+								</li>
+								<li>
+									<a href="#">Privacy Policy</a>
+								</li>
+								<li>
+									<a href="#">Help Center</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__foot">
+				<div class="container">
+					<div class="footer__row">
+						<div class="copyright">© 2022 VTalk.ai. All rights reserved</div>
+						<div class="footer-social">
+							<a href="#" class="footer-social__icon">
+								<img src="assets/images/dribble-icon.svg" alt="">
+							</a>
+							<a href="#" class="footer-social__icon">
+								<img src="assets/images/twit-icon_wh.svg" alt="">
+							</a>
+							<a href="#" class="footer-social__icon">
+								<img src="assets/images/yt-icon.svg" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer><!--/footer-->
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="assets/js/script.js"></script>
+</body>
+</html>

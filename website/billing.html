@@ -262,12 +262,12 @@
 					<!--<video autoplay="autoplay" preload="auto" loop muted>
 				 		<source src="assets/images/changing.mp4" type="video/mp4"/>
 					</video>-->
-					<img src="assets/images/travel-intro.jpg" alt="">
+					<img src="assets/images/billing-intro.jpg" alt="">
 				</div>
 				<div class="intro__inner">
-					<h1 class="intro__title">AI-Powered Voice Solutions for Travel and Hospitality</h1>
+					<h1 class="intro__title">Billing & Payments Solutions –<br> AI Voice Assistants for Business</h1>
 					<div class="intro__description">
-						<p>Deploy vTalk no-code AI-powered virtual voice assistants for travel and hospitality companies and upgrade your customer experience. Our AI-based voice assistant platform can help increase revenue and optimize costs with the possibility of staying in touch with your customers 24/7.</p>
+						<p>Automate routine conversations with AI-based voice assistants’ platform. vTalk intelligent voice bots can help your consumers make payments, update billing information, and more.</p>
 					</div>
 					<div class="intro__control">
 						<a href="#" class="intro__btn">
@@ -277,144 +277,296 @@
 				</div>
 			</section><!--/intro-->
 			<div class="bg-grad">
-				<section class="features features-dialogues section">
-					<div class="container container_1270">
+				<section class="customer customer-top customer_wh">
+					<div class="container">
+						<div class="customer-box customer-box_dialogue">
+							<h3 class="title-medium">AI-powered Voice Assistants for Billing & Payments</h3>
+							<div class="customer__navbox">
+								<div class="customer__tabs-nav tabs-nav">
+									<a href="#" onclick="javascript:tabDialogue(1);return false;" class="t1 active">Make a Payment</a>
+									<a href="#" onclick="javascript:tabDialogue(2);return false;"  class="t2">Balance Inquiries</a>
+									<a href="#" onclick="javascript:tabDialogue(3);return false;"  class="t3">Payment Reminder</a>
+									<a href="#" onclick="javascript:tabDialogue(4);return false;"  class="t4">Check payment status</a>
+									<a href="#" onclick="javascript:tabDialogue(5);return false;"  class="t5">Process a refund</a>
+								</div><!--/customer__tabs-nav-->
+							</div><!--/customer__navbox-->
+							<div class="customer__tab tab-block tab_1">
+								<div class="customer__inner">
+									<div class="customer__info">
+										<div class="customer__title">Automated Customers’ Payments</div>
+										<div class="customer__subtitle">Automated customers’ payments can be made using virtual voice assistants by integrating them with different payment methods such as credit cards, bank transfers, or digital wallets. This allows customers to make payments over the phone by providing their payment information to the virtual voice assistant, which will process the payment and confirm the transaction. </div>
+									</div>
+									<div class="customer__content">
+										<div class="customer-dialogue">
+											<div class="dialogue">
+												<div class="dialogue__part dialogue__part_right">
+													<div class="dialogue__item">
+														<div class="dialogue__text">
+															<p>Hi, I would like to make a payment on my account number <a href="#">123456</a>.</p>
+														</div>
+														<div class="dialogue__icon">
+															<img src="assets/images/girl_21.jpg" alt="">
+														</div>
+													</div><!--/dialogue__item-->
+													<div class="dialogue__data">Intent: /make_payment</div>
+													<div class="dialogue__data lpurple">Entity: account_number=”123456”</div>
+													<div class="dialogue__data green">Action - API Call: check_account(“current_phone_number”, ”123456”) - status OK;</div>
+												</div><!--/dialogue__part-->
+												<div class="dialogue__part">
+													<div class="dialogue__item">
+														<div class="dialogue__icon">
+															<img src="assets/images/logo-grad.svg" alt="">
+														</div>
+														<div class="dialogue__text">
+															<p> Thank you. And how much would you like to pay today?</p>
+														</div>
+													</div><!--/dialogue__item-->
+												</div><!--/dialogue__part-->
+												<div class="dialogue__part dialogue__part_right">
+													<div class="dialogue__item">
+														<div class="dialogue__text">
+															<p> I'd like to pay <a href="#">$100</a>.</p>
+														</div>
+														<div class="dialogue__icon">
+															<img src="assets/images/girl_21.jpg" alt="">
+														</div>
+													</div><!--/dialogue__item-->
+													<div class="dialogue__data lpurple">Entity: amount=”100 USD”</div>
+													<div class="dialogue__data green">Action: Go to /get_payment_source</div>
+												</div><!--/dialogue__part-->
+											</div><!--/dialogue-->
+										</div>
+									</div>
+								</div>
+							</div><!--/customer__tab-->
+							<div class="customer__tab tab-block tab_2">
+								<div class="customer__inner">
+									<div class="customer__info">
+										<div class="customer__title">Balance Inquiries</div>
+										<div class="customer__subtitle">Balance inquiries allow customers to check their account balance over the phone using a virtual voice assistant. This can be done by integrating the virtual voice assistant with a customer's account information and programming it to provide accurate and up-to-date balance information.</div>
+									</div>
+									<div class="customer__content">
+										<div class="customer-dialogue">
+											<div class="dialogue">
+												<div class="dialogue__part dialogue__part_right">
+													<div class="dialogue__item">
+														<div class="dialogue__text">
+															<p>Can you check my account balance, please?</p>
+														</div>
+														<div class="dialogue__icon">
+															<img src="assets/images/girl_5.jpg" alt="">
+														</div>
+													</div><!--/dialogue__item-->
+													<div class="dialogue__data">Intent: /check_balance</div>
+												</div><!--/dialogue__part-->
+												<div class="dialogue__part">
+													<div class="dialogue__item">
+														<div class="dialogue__icon">
+															<img src="assets/images/logo-grad.svg" alt="">
+														</div>
+														<div class="dialogue__text">
+															<p>Hello. To verify your identity, can you please provide your date of birth?</p>
+														</div>
+													</div><!--/dialogue__item-->
+												</div><!--/dialogue__part-->
+												<div class="dialogue__part dialogue__part_right">
+													<div class="dialogue__item">
+														<div class="dialogue__text">
+															<p>My date of birth is January 1st, 1990.</p>
+														</div>
+														<div class="dialogue__icon">
+															<img src="assets/images/girl_5.jpg" alt="">
+														</div>
+													</div><!--/dialogue__item-->
+													<div class="dialogue__data lpurple">Entity: birth_date=”01.01.1990”</div>
+													<div class="dialogue__data green">Action - API Call:  check_balance(“123456”, ”01.01.1990”) - status OK;</div>
+												</div><!--/dialogue__part-->
+												<div class="dialogue__part">
+													<div class="dialogue__item">
+														<div class="dialogue__icon">
+															<img src="assets/images/logo-grad.svg" alt="">
+														</div>
+														<div class="dialogue__text">
+															<p>Thank you. Your account balance as of today is $500. Is there anything else I can help you with?</p>
+														</div>
+													</div><!--/dialogue__item-->
+												</div><!--/dialogue__part-->
+											</div><!--/dialogue-->
+										</div>
+									</div>
+								</div>
+							</div><!--/customer__tab-->
+							<div class="customer__tab tab-block tab_3">
+								<div class="customer__inner">
+									<div class="customer__info">
+										<div class="customer__title">Automated<br> payment reminders</div>
+										<div class="customer__subtitle">Virtual voice assistants can help remind customers of upcoming or overdue payments. This can be done by programming the virtual voice assistant with a script that includes information about the payment and the due date. This option can increase the chances of successful payment collection.</div>
+									</div>
+									<div class="customer__content">
+										<div class="customer-dialogue">
+											<div class="dialogue">
+												<div class="dialogue__part">
+													<div class="dialogue__item">
+														<div class="dialogue__icon">
+															<img src="assets/images/logo-grad.svg" alt="">
+														</div>
+														<div class="dialogue__text">
+															<p>Hello, this is a payment reminder from XYZ Company. Your payment of $50 is due tomorrow. Please make sure to complete the payment by the due date to avoid any late fees.</p>
+														</div>
+													</div><!--/dialogue__item-->
+												</div><!--/dialogue__part-->
+												<div class="dialogue__part dialogue__part_right">
+													<div class="dialogue__item">
+														<div class="dialogue__text">
+															<p>Yes, I have not made the payment yet. How can I make it?</p>
+														</div>
+														<div class="dialogue__icon">
+															<img src="assets/images/girl_18.jpg" alt="">
+														</div>
+													</div><!--/dialogue__item-->
+													<div class="dialogue__data">Intent: /available_payment_methods</div>
+												</div><!--/dialogue__part-->
+												<div class="dialogue__part">
+													<div class="dialogue__item">
+														<div class="dialogue__icon">
+															<img src="assets/images/logo-grad.svg" alt="">
+														</div>
+														<div class="dialogue__text">
+															<p> You can pay through our website or mobile app. I can also help you make a payment right now. What payment option would you like to use?</p>
+														</div>
+													</div><!--/dialogue__item-->
+												</div><!--/dialogue__part-->
+											</div><!--/dialogue-->
+										</div>
+									</div>
+								</div>
+							</div><!--/customer__tab-->
+							<div class="customer__tab tab-block tab_4">
+								<div class="customer__inner">
+									<div class="customer__info">
+										<div class="customer__title">To check the payment<br> status 24X7</div>
+										<div class="customer__subtitle">vTalk.ai virtual voice assistant can be integrated with the payment system, allowing customers to check the status of their payments at any time of the day. It can be done by providing the virtual voice assistant with an order number or other payment information, which it can use to access the relevant payment data and provide an updated status to the customer.</div>
+									</div>
+									<div class="customer__content">
+										<div class="customer-dialogue">
+											<div class="dialogue">
+												<div class="dialogue__part dialogue__part_right">
+													<div class="dialogue__item">
+														<div class="dialogue__text">
+															<p>Hi, I wanted to check the status of my <a href="#">last</a> payment. I made a payment a few days ago, and I haven't received any confirmation yet.</p>
+														</div>
+														<div class="dialogue__icon">
+															<img src="assets/images/girl_22.jpg" alt="">
+														</div>
+													</div><!--/dialogue__item-->
+													<div class="dialogue__data">Intent: /check_payment_status</div>
+													<div class="dialogue__data lpurple">Entity: payment_date=”last”</div>
+												</div><!--/dialogue__part-->
+												<div class="dialogue__part">
+													<div class="dialogue__item">
+														<div class="dialogue__icon">
+															<img src="assets/images/logo-grad.svg" alt="">
+														</div>
+														<div class="dialogue__text">
+															<p>Thank you for reaching out. Please provide me with your account number so I can look at your payment history.</p>
+														</div>
+													</div><!--/dialogue__item-->
+												</div><!--/dialogue__part-->
+												<div class="dialogue__part dialogue__part_right">
+													<div class="dialogue__item">
+														<div class="dialogue__text">
+															<p>Sure, my account number is <a href="#">123456789</a>.</p>
+														</div>
+														<div class="dialogue__icon">
+															<img src="assets/images/girl_22.jpg" alt="">
+														</div>
+													</div><!--/dialogue__item-->
+													<div class="dialogue__data lpurple">Entity: account_number=”123456789”</div>
+													<div class="dialogue__data green">Action - API Call: check_account(“current_phone_number”, ”123456789”,”last”) - status OK;</div>
+												</div><!--/dialogue__part-->
+											</div><!--/dialogue-->
+										</div>
+									</div>
+								</div>
+							</div><!--/customer__tab-->
+							<div class="customer__tab tab-block tab_5">
+								<div class="customer__inner">
+									<div class="customer__info">
+										<div class="customer__title">Easy and quick refunds</div>
+										<div class="customer__subtitle">vTalk.ai voice bots can simplify the refund process, increasing customer satisfaction, and loyalty. To process a refund, a virtual voice assistant can be integrated with the payment system and programmed to verify customer information, initiate the refund and provide the customer with confirmation of the transaction.</div>
+									</div>
+									<div class="customer__content">
+										<div class="customer-dialogue">
+											<div class="dialogue">
+												<div class="dialogue__part dialogue__part_right">
+													<div class="dialogue__item">
+														<div class="dialogue__text">
+															<p>Hi, I would like to request a refund for my recent purchase.</p>
+														</div>
+														<div class="dialogue__icon">
+															<img src="assets/images/girl_23.jpg" alt="">
+														</div>
+													</div><!--/dialogue__item-->
+													<div class="dialogue__data">Intent: /refund_request</div>
+												</div><!--/dialogue__part-->
+												<div class="dialogue__part">
+													<div class="dialogue__item">
+														<div class="dialogue__icon">
+															<img src="assets/images/logo-grad.svg" alt="">
+														</div>
+														<div class="dialogue__text">
+															<p>I'd be happy to assist you with that. Please provide me with your order number and the reason for the refund.</p>
+														</div>
+													</div><!--/dialogue__item-->
+												</div><!--/dialogue__part-->
+												<div class="dialogue__part dialogue__part_right">
+													<div class="dialogue__item">
+														<div class="dialogue__text">
+															<p>Sure, my order number is <a href="#">12345</a>, and I need a refund because the <a href="#">product</a> I received was <a href="#">damaged</a>.</p>
+														</div>
+														<div class="dialogue__icon">
+															<img src="assets/images/girl_23.jpg" alt="">
+														</div>
+													</div><!--/dialogue__item-->
+													<div class="dialogue__data lpurple">Entity: order_number=”12345”, refund_reason=”damaged product”</div>
+													<div class="dialogue__data green">Action - API Call: create_refund (”12345”, ”damaged product”) - status OK;</div>
+												</div><!--/dialogue__part-->
+											</div><!--/dialogue-->
+										</div>
+									</div>
+								</div>
+							</div><!--/customer__tab-->
+						</div><!--/customer-box-->
+					</div>
+				</section><!--/customer-->
+				<section class="features section">
+					<div class="container container_big">
 						<div class="features__inner">
 							<div class="features__item">
 								<div class="features__info">
-									<h3 class="features__title title-medium">24/7 Customer Support</h3>
-									<div class="features__description description">Voice assistants powered by vTalk.ai can readily interface with pre-existing computer systems, which enables them to offer around-the-clock support and facilitate the settlement of issues more quickly, even with full functionality on the phone. Full support means complete trust, and this is what you get with the AI voice assistant.</div>
+									<h3 class="features__title title-medium">Increase revenue and customer satisfaction</h3>
+									<div class="features__description description">Billing and payment automation using virtual voice assistants can boost revenue by making the process more efficient, reducing errors, increasing accuracy, and allowing businesses to handle more transactions. This can also improve customer expectations by providing 24/7 support and automated payment options.﻿</div>
 								</div>
-								<div class="features__dialogue">
-									<div class="dialogue">
-										<div class="dialogue__part dialogue__part_right">
-											<div class="dialogue__item">
-												<div class="dialogue__text">
-													<p>I want to fly from <a href="#">New York</a> to <a href="#">London</a> on the <a href="#">15th of next month</a>.</p>
-												</div>
-												<div class="dialogue__icon">
-													<img src="assets/images/man_6.jpg" alt="">
-												</div>
-											</div><!--/dialogue__item-->
-											<div class="dialogue__data lpurple">Entity: departure_city=”New York”, arrival_city=”London”, date=“2023-04-15”</div>
-											<div class="dialogue__data green">Action - API Call: check_fligths(“2023-04-15”,”New York”,”London”) - status OK;</div>
-										</div><!--/dialogue__part-->
-										<div class="dialogue__part">
-											<div class="dialogue__item">
-												<div class="dialogue__icon">
-													<img src="assets/images/logo-grad.svg" alt="">
-												</div>
-												<div class="dialogue__text">
-													<p>Okay, let me see what options are available. I've found several flights for you to choose from. Which one would you like to book?</p>
-												</div>
-											</div><!--/dialogue__item-->
-										</div><!--/dialogue__part-->
-									</div><!--/dialogue-->
+								<div class="features__photo">
+									<img src="assets/images/features-photo_22.png" alt="">
 								</div>
 							</div><!--/features__item-->
 							<div class="features__item">
 								<div class="features__info">
-									<h3 class="features__title title-medium">Complete reservations</h3>
-									<div class="features__description description">Voice assistants powered by vTalk.ai can ask for customers’ information when users choose the details of a vacation plan, such as a flight or a hotel. While offering a channel to complete payments via credit cards, finalize the bookings, and delivers itineraries via email or message, it also gives a payment gateway for the user to make the payment, complete their reservations, and obtain an electronic itinerary.</div>
+									<h3 class="features__title title-medium">Free up your employees to focus on the most complex tasks</h3>
+									<div class="features__description description">By using virtual voice assistants for billing, payment processing, and customer service, service staff can be freed up to focus on more critical or complex customer interactions and build relationships. This can ultimately lead to a better customer experience, increased satisfaction, and loyalty.</div>
 								</div>
-								<div class="features__dialogue">
-									<div class="dialogue">
-										<div class="dialogue__part dialogue__part_right">
-											<div class="dialogue__item">
-												<div class="dialogue__text">
-													<p>I want to check in on the <a href="#">15th of this month</a> and check out on the <a href="#">20th</a>.</p>
-												</div>
-												<div class="dialogue__icon">
-													<img src="assets/images/girl_17.jpg" alt="">
-												</div>
-											</div><!--/dialogue__item-->
-											<div class="dialogue__data lpurple">Entity: from_date=”2023-04-15”, to_date=”2023-04-20”</div>
-										</div><!--/dialogue__part-->
-										<div class="dialogue__part">
-											<div class="dialogue__item">
-												<div class="dialogue__icon">
-													<img src="assets/images/logo-grad.svg" alt="">
-												</div>
-												<div class="dialogue__text">
-													<p>Got it. Would you like a specific type of room, or do you have any preferences?</p>
-												</div>
-											</div><!--/dialogue__item-->
-										</div><!--/dialogue__part-->
-										<div class="dialogue__part dialogue__part_right">
-											<div class="dialogue__item">
-												<div class="dialogue__text">
-													<p>I'd like a <a href="#">standard</a> room with a <a href="#">queen-sized bed</a>.</p>
-												</div>
-												<div class="dialogue__icon">
-													<img src="assets/images/girl_17.jpg" alt="">
-												</div>
-											</div><!--/dialogue__item-->
-											<div class="dialogue__data lpurple">Entity: room_type=”standard”, options=[“Queen-size bed”]</div>
-											<div class="dialogue__data green">Action - API Call: check_available (“2023-04-15”, “2023-04-20”, ”standard”, options=[“Queen-size   bed”]) - status OK;</div>
-										</div><!--/dialogue__part-->
-									</div><!--/dialogue-->
+								<div class="features__photo">
+									<img src="assets/images/features-photo_23.png" alt="">
 								</div>
 							</div><!--/features__item-->
 							<div class="features__item">
 								<div class="features__info">
-									<h3 class="features__title title-medium">Manage cancellations</h3>
-									<div class="features__description description">Without involving human operators, the vTalk.ai system can enable reservation cancellations. It will request the customer's details and reservation codes, after which it can cancel the client's reservations, suggest alternatives for canceled hotels or flights, advise the client about refund and return procedures, and make claims for those refunds.</div>
+									<h3 class="features__title title-medium">Get insights using conversation data analysis</h3>
+									<div class="features__description description">Conversation data analysis uses data from customer interactions to gain insights into customer needs, preferences, and behaviors. It can improve customer service, optimize sales strategies, and drive innovation. Additionally, conversation data analysis can be used to improve the performance of virtual voice assistants by identifying areas for improvement in customer interactions and training the model accordingly.</div>
 								</div>
-								<div class="features__dialogue">
-									<div class="dialogue">
-										<div class="dialogue__part dialogue__part_right">
-											<div class="dialogue__item">
-												<div class="dialogue__text">
-													<p>I would like to cancel my hotel reservation.</p>
-												</div>
-												<div class="dialogue__icon">
-													<img src="assets/images/man_7.jpg" alt="">
-												</div>
-											</div><!--/dialogue__item-->
-											<div class="dialogue__data">Intent: /cancel_reservation</div>
-										</div><!--/dialogue__part-->
-										<div class="dialogue__part">
-											<div class="dialogue__item">
-												<div class="dialogue__icon">
-													<img src="assets/images/logo-grad.svg" alt="">
-												</div>
-												<div class="dialogue__text">
-													<p>I'm sorry to hear that. What is your reservation number or the name the reservation was booked under so I can assist you with the cancellation?</p>
-												</div>
-											</div><!--/dialogue__item-->
-										</div><!--/dialogue__part-->
-									</div><!--/dialogue-->
-								</div>
-							</div><!--/features__item-->
-							<div class="features__item">
-								<div class="features__info">
-									<h3 class="features__title title-medium">Travel notifications & emergency response</h3>
-									<div class="features__description description">With vTalk.ai virtual voice assistants, you can automatically tell passengers about upcoming trip plans, changes to their schedule, and other vital information via voice or SMS channels. Customers' satisfaction levels with your company will significantly impact your ability to communicate with them in advance and relieve their worries.</div>
-								</div>
-								<div class="features__dialogue">
-									<div class="dialogue">
-										<div class="dialogue__part">
-											<div class="dialogue__item">
-												<div class="dialogue__icon">
-													<img src="assets/images/logo-grad.svg" alt="">
-												</div>
-												<div class="dialogue__text">
-													<p>Hello, John. Your flight time has been changed to an earlier departure time. Would you like to change your flight to the new time or select a different flight?</p>
-												</div>
-											</div><!--/dialogue__item-->
-										</div><!--/dialogue__part-->
-										<div class="dialogue__part dialogue__part_right">
-											<div class="dialogue__item">
-												<div class="dialogue__text">
-													<p>Can I change my flight to a later time instead?</p>
-												</div>
-												<div class="dialogue__icon">
-													<img src="assets/images/man_8.jpg" alt="">
-												</div>
-											</div><!--/dialogue__item-->
-											<div class="dialogue__data">Intent: /reschedule_request</div>
-										</div><!--/dialogue__part-->
-									</div><!--/dialogue-->
+								<div class="features__photo">
+									<img src="assets/images/features-photo_24.png" alt="">
 								</div>
 							</div><!--/features__item-->
 						</div>
@@ -485,165 +637,7 @@
 						</div>
 					</div>
 				</section><!--/advantages-->
-				<section class="steps mb-100">
-					<div class="container container_big">
-						<h2 class="title-block title-block_center">Just six advantages to start</h2>
-						<div class="steps__wrapper">
-							<div class="steps-scale">
-								<div class="steps-scale__item">
-									<div class="steps-scale__title">Your internal job</div>
-									<div class="steps-scale__fill"></div>
-								</div>
-								<div class="steps-scale__item">
-									<div class="steps-scale__title">
-										<img src="assets/images/logo-bl.svg" alt="">
-										<span>Platform</span>
-									</div>
-									<div class="steps-scale__fill"></div>
-								</div>
-							</div><!--/steps-scale-->
-							<div class="steps__inner">
-								<div class="steps__item">
-									<div class="steps__icon">
-										<img src="assets/images/target-icon.svg" alt="">
-									</div>
-									<div class="steps__name">Define a target</div>
-								</div><!--/steps__item-->
-								<div class="steps__item">
-									<div class="steps__icon pink">
-										<img src="assets/images/note-icon.svg" alt="">
-									</div>
-									<div class="steps__name">Create a conversation script</div>
-								</div><!--/steps__item-->
-								<div class="steps__item">
-									<div class="steps__icon yellow">
-										<img src="assets/images/tree_structure-icon.svg" alt="">
-									</div>
-									<div class="steps__name">Build a scenario in visual designer</div>
-								</div><!--/steps__item-->
-								<div class="steps__item">
-									<div class="steps__icon green">
-										<img src="assets/images/atom-icon.svg" alt="">
-									</div>
-									<div class="steps__name">Provide AI training</div>
-								</div><!--/steps__item-->
-								<div class="steps__item">
-									<div class="steps__icon purple">
-										<img src="assets/images/phone_call-icon.svg" alt="">
-									</div>
-									<div class="steps__name">Make test calls and improve the model</div>
-								</div><!--/steps__item-->
-								<div class="steps__item">
-									<div class="steps__icon black">
-										<img src="assets/images/broadcast-icon_bl.svg" alt="">
-									</div>
-									<div class="steps__name">Go to live calls</div>
-								</div><!--/steps__item-->
-							</div>
-						</div>
-					</div>
-				</section><!--/steps-->
 			</div><!--/bg-grad-->
-			<section class="advantages-check section">
-				<div class="container">
-					<h2 class="title-block title-block_center">Virtual agents benefits for finance organizations</h2>
-					<div class="advantages-check__inner">
-						<div class="advantages-box">
-							<div class="advantages-box__icon-check">
-								<img src="assets/images/check-circle_pink.svg" alt="">
-							</div>
-							<div class="advantages-box__info">
-								<div class="advantages-box__title">For your Customers</div>
-								<ul class="advantages-box__list">
-									<li>Reliable service standards</li>
-									<li>Improved user satisfaction</li>
-									<li>24/7 availability</li>
-									<li>Ease of use</li>
-								</ul>
-							</div>
-						</div><!--/advantages-box-->
-						<div class="advantages-box">
-							<div class="advantages-box__icon-check">
-								<img src="assets/images/check-circle_purple.svg" alt="">
-							</div>
-							<div class="advantages-box__info">
-								<div class="advantages-box__title">For your Emloyees</div>
-								<ul class="advantages-box__list">
-									<li>Better work comfort for front-desk and admin employees</li>
-									<li>Opportunities to upskill</li>
-									<li>Helps with proper work-life balance and reduces the burnout rate</li>
-								</ul>
-							</div>
-						</div><!--/advantages-box-->
-						<div class="advantages-box">
-							<div class="advantages-box__icon-check">
-								<img src="assets/images/check-circle_green.svg" alt="">
-							</div>
-							<div class="advantages-box__info">
-								<div class="advantages-box__title">For your Business</div>
-								<ul class="advantages-box__list">
-									<li>Cost optimization</li>
-									<li>Improved customer adherence</li>
-									<li>More profit without compromise of standards with zero additional cost</li>
-									<li>The high conversion rate for advertising because of 24/7 availability</li>
-								</ul>
-							</div>
-						</div><!--/advantages-box-->
-					</div>
-				</div>
-			</section><!--/advantages-check-->
-			<section class="faq">
-				<div class="container container_1170">
-					<h2 class="title-block title-block_center">Frequently asked questions</h2>
-					<div class="faq__inner">
-						<div class="faq__item">
-							<div class="faq__question">
-								<span>How is voice AI used in the hospitality industry?</span>
-								<svg>
-									<use xlink:href="#arrow-down"></use>
-								</svg>
-							</div>
-							<div class="faq__answer">Absolutely nothing! We built vTalk.ai to take away the complexity of setting up and launching of Virtual Voice Assistants. Please find detailed information how to launch your campaigns in our Project Start section.</div>
-						</div><!--/faq__item-->
-						<div class="faq__item">
-							<div class="faq__question">
-								<span>How is Artificial Intelligence AI helpful in travel?</span>
-								<svg>
-									<use xlink:href="#arrow-down"></use>
-								</svg>
-							</div>
-							<div class="faq__answer">It depends on your needs and the number of customers. vTalk.ai pricing starts from $99 per month and can be used by both enterprises and small and medium businesses. Please find the detailed information on our pricing page.</div>
-						</div><!--/faq__item-->
-						<div class="faq__item">
-							<div class="faq__question">
-								<span> What are the impacts of AI in the tourism and hospitality industry?</span>
-								<svg>
-									<use xlink:href="#arrow-down"></use>
-								</svg>
-							</div>
-							<div class="faq__answer">It depends on your needs and the number of customers. vTalk.ai pricing starts from $99 per month and can be used by both enterprises and small and medium businesses. Please find the detailed information on our pricing page.</div>
-						</div><!--/faq__item-->
-						<div class="faq__item">
-							<div class="faq__question">
-								<span>How much does AI implementation cost for hospitality companies?</span>
-								<svg>
-									<use xlink:href="#arrow-down"></use>
-								</svg>
-							</div>
-							<div class="faq__answer">No, the setup and onboarding process is entirely free. vTalk.ai is the only company that offers such a service for all pricing plans, including Basic. This item is essential to our mission - to make virtual voice assistants available to everyone.</div>
-						</div><!--/faq__item-->
-						<div class="faq__item">
-							<div class="faq__question">
-								<span>How do voice search and voice control influences the hospitality industry?</span>
-								<svg>
-									<use xlink:href="#arrow-down"></use>
-								</svg>
-							</div>
-							<div class="faq__answer">By reducing response times, simplifying the booking process, and enabling guests to order room service or new towels without leaving their rooms or moving a muscle, voice search and control help the hospitality business create a superior customer experience. The hotel sector may also employ voice control technology for marketing purposes to set itself apart from rivals and position itself as a forward-thinking, tech-savvy company that can provide clients with a cutting-edge experience.</div>
-						</div><!--/faq__item-->
-					</div>
-				</div>
-			</section><!--/faq-->
 			<section class="get-call">
 				<div class="container">
 					<div class="get-call__inner">
@@ -663,6 +657,115 @@
 					</div>
 				</div>
 			</section><!--/get-call-->
+			<section class="steps section">
+				<div class="container container_big">
+					<h2 class="title-block title-block_center">Just six advantages to start</h2>
+					<div class="steps__wrapper">
+						<div class="steps-scale">
+							<div class="steps-scale__item">
+								<div class="steps-scale__title">Your internal job</div>
+								<div class="steps-scale__fill"></div>
+							</div>
+							<div class="steps-scale__item">
+								<div class="steps-scale__title">
+									<img src="assets/images/logo-bl.svg" alt="">
+									<span>Platform</span>
+								</div>
+								<div class="steps-scale__fill"></div>
+							</div>
+						</div><!--/steps-scale-->
+						<div class="steps__inner">
+							<div class="steps__item">
+								<div class="steps__icon">
+									<img src="assets/images/target-icon.svg" alt="">
+								</div>
+								<div class="steps__name">Define a target</div>
+							</div><!--/steps__item-->
+							<div class="steps__item">
+								<div class="steps__icon pink">
+									<img src="assets/images/note-icon.svg" alt="">
+								</div>
+								<div class="steps__name">Create a conversation script</div>
+							</div><!--/steps__item-->
+							<div class="steps__item">
+								<div class="steps__icon yellow">
+									<img src="assets/images/tree_structure-icon.svg" alt="">
+								</div>
+								<div class="steps__name">Build a scenario in visual designer</div>
+							</div><!--/steps__item-->
+							<div class="steps__item">
+								<div class="steps__icon green">
+									<img src="assets/images/atom-icon.svg" alt="">
+								</div>
+								<div class="steps__name">Provide AI training</div>
+							</div><!--/steps__item-->
+							<div class="steps__item">
+								<div class="steps__icon purple">
+									<img src="assets/images/phone_call-icon.svg" alt="">
+								</div>
+								<div class="steps__name">Make test calls and improve the model</div>
+							</div><!--/steps__item-->
+							<div class="steps__item">
+								<div class="steps__icon black">
+									<img src="assets/images/broadcast-icon_bl.svg" alt="">
+								</div>
+								<div class="steps__name">Go to live calls</div>
+							</div><!--/steps__item-->
+						</div>
+					</div>
+				</div>
+			</section><!--/steps-->
+			<section class="faq">
+				<div class="container container_1170">
+					<h2 class="title-block title-block_center">Frequently asked questions</h2>
+					<div class="faq__inner">
+						<div class="faq__item">
+							<div class="faq__question">
+								<span>How can a virtual voice assistant be used for billing & payments automation?</span>
+								<svg>
+									<use xlink:href="#arrow-down"></use>
+								</svg>
+							</div>
+							<div class="faq__answer">Absolutely nothing! We built vTalk.ai to take away the complexity of setting up and launching of Virtual Voice Assistants. Please find detailed information how to launch your campaigns in our Project Start section.</div>
+						</div><!--/faq__item-->
+						<div class="faq__item">
+							<div class="faq__question">
+								<span>What is voice payment?</span>
+								<svg>
+									<use xlink:href="#arrow-down"></use>
+								</svg>
+							</div>
+							<div class="faq__answer">It depends on your needs and the number of customers. vTalk.ai pricing starts from $99 per month and can be used by both enterprises and small and medium businesses. Please find the detailed information on our pricing page.</div>
+						</div><!--/faq__item-->
+						<div class="faq__item">
+							<div class="faq__question">
+								<span>How much does virtual voice assistant implementation cost?</span>
+								<svg>
+									<use xlink:href="#arrow-down"></use>
+								</svg>
+							</div>
+							<div class="faq__answer">The setup and onboarding of the vTalk.ai virtual voice assistant are entirely free. We can help you go through the process in less than a week without additional investments.</div>
+						</div><!--/faq__item-->
+						<div class="faq__item">
+							<div class="faq__question">
+								<span>Are there any additional costs for setup and onboarding?</span>
+								<svg>
+									<use xlink:href="#arrow-down"></use>
+								</svg>
+							</div>
+							<div class="faq__answer">The setup and onboarding of the vTalk.ai virtual voice assistant are entirely free. We can help you go through the process in less than a week without additional investments.</div>
+						</div><!--/faq__item-->
+					</div>
+				</div>
+			</section><!--/faq-->
+			<section class="question">
+				<div class="container container_small">
+					<div class="question__inner">
+						<h3 class="title-medium">Have more questions? We're here for you:</h3>
+						<a href="#" class="btn-gradient">Book a demo</a>
+					</div>
+				</div>
+			</section>
 			<section class="blog-list section">
 				<div class="container">
 					<h2 class="title-block title-block_center">Latest insights</h2>

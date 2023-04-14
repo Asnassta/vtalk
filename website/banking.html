@@ -259,7 +259,7 @@
 		<main class="main">
 			<section class="intro section">
 				<div class="intro__content">
-					<video width="100%" autoplay="autoplay" preload="auto" autoplay="true" loop="true" muted="muted">
+					<video autoplay="autoplay" preload="auto" loop muted>
 				 		<source src="assets/images/changing.mp4" type="video/mp4"/>
 					</video>
 					<!--<img src="assets/images/banking-intro.jpg" alt="">-->
@@ -308,7 +308,7 @@
 													</div><!--/dialogue__item-->
 													<div class="dialogue__data">Intent: /check_balance</div>
 												</div><!--/dialogue__part-->
-												<div class="dialogue__part dialogue__part">
+												<div class="dialogue__part">
 													<div class="dialogue__item">
 														<div class="dialogue__icon">
 															<img src="assets/images/logo-grad.svg" alt="">
@@ -330,7 +330,7 @@
 													<div class="dialogue__data lpurple">Entity: account_number=”123456789”, ssn_digits=”1234”</div>
 													<div class="dialogue__data green">Action - API Call: show_balance(‘123456789’,’1234’) - status OK;</div>
 												</div><!--/dialogue__part-->
-												<div class="dialogue__part dialogue__part">
+												<div class="dialogue__part">
 													<div class="dialogue__item">
 														<div class="dialogue__icon">
 															<img src="assets/images/logo-grad.svg" alt="">
@@ -365,13 +365,13 @@
 													</div><!--/dialogue__item-->
 													<div class="dialogue__data">Intent: /debt_info</div>
 												</div><!--/dialogue__part-->
-												<div class="dialogue__part dialogue__part">
+												<div class="dialogue__part">
 													<div class="dialogue__item">
 														<div class="dialogue__icon">
 															<img src="assets/images/logo-grad.svg" alt="">
 														</div>
 														<div class="dialogue__text">
-															<p>OHello! I can help you with that. Please provide me with your account number so I can look up your account information.</p>
+															<p>Hello! I can help you with that. Please provide me with your account number so I can look up your account information.</p>
 														</div>
 													</div><!--/dialogue__item-->
 												</div><!--/dialogue__part-->
@@ -387,7 +387,7 @@
 													<div class="dialogue__data lpurple">Entity: account_number=”123456”</div>
 													<div class="dialogue__data green">Action - API Call:  show_balance(‘123456’) - status OK;</div>
 												</div><!--/dialogue__part-->
-												<div class="dialogue__part dialogue__part">
+												<div class="dialogue__part">
 													<div class="dialogue__item">
 														<div class="dialogue__icon">
 															<img src="assets/images/logo-grad.svg" alt="">
@@ -422,7 +422,7 @@
 													</div><!--/dialogue__item-->
 													<div class="dialogue__data">Intent: /products_info</div>
 												</div><!--/dialogue__part-->
-												<div class="dialogue__part dialogue__part">
+												<div class="dialogue__part">
 													<div class="dialogue__item">
 														<div class="dialogue__icon">
 															<img src="assets/images/logo-grad.svg" alt="">
@@ -444,7 +444,7 @@
 													<div class="dialogue__data lpurple">Entity: product_type=”investments”</div>
 													<div class="dialogue__data green">Action: Go to /products/investments</div>
 												</div><!--/dialogue__part-->
-												<div class="dialogue__part dialogue__part">
+												<div class="dialogue__part">
 													<div class="dialogue__item">
 														<div class="dialogue__icon">
 															<img src="assets/images/logo-grad.svg" alt="">
@@ -479,7 +479,7 @@
 													</div><!--/dialogue__item-->
 													<div class="dialogue__data">Intent: /products_info</div>
 												</div><!--/dialogue__part-->
-												<div class="dialogue__part dialogue__part">
+												<div class="dialogue__part">
 													<div class="dialogue__item">
 														<div class="dialogue__icon">
 															<img src="assets/images/logo-grad.svg" alt="">
@@ -501,7 +501,7 @@
 													<div class="dialogue__data lpurple">Entity: product_type=”investments”</div>
 													<div class="dialogue__data green">Action: Go to /products/index_funds</div>
 												</div><!--/dialogue__part-->
-												<div class="dialogue__part dialogue__part">
+												<div class="dialogue__part">
 													<div class="dialogue__item">
 														<div class="dialogue__icon">
 															<img src="assets/images/logo-grad.svg" alt="">
@@ -525,7 +525,7 @@
 									<div class="customer__content">
 										<div class="customer-dialogue">
 											<div class="dialogue">
-												<div class="dialogue__part dialogue__part">
+												<div class="dialogue__part">
 													<div class="dialogue__item">
 														<div class="dialogue__icon">
 															<img src="assets/images/logo-grad.svg" alt="">
@@ -548,7 +548,7 @@
 													<div class="dialogue__data lpurple">Entity: value=”7”</div>
 													<div class="dialogue__data green">Action: Go to /medium_level/extended_feedback</div>
 												</div><!--/dialogue__part-->
-												<div class="dialogue__part dialogue__part">
+												<div class="dialogue__part">
 													<div class="dialogue__item">
 														<div class="dialogue__icon">
 															<img src="assets/images/logo-grad.svg" alt="">
@@ -595,7 +595,7 @@
 													</div><!--/dialogue__item-->
 													<div class="dialogue__data">Intent: /check_balance</div>
 												</div><!--/dialogue__part-->
-												<div class="dialogue__part dialogue__part">
+												<div class="dialogue__part">
 													<div class="dialogue__item">
 														<div class="dialogue__icon">
 															<img src="assets/images/logo-grad.svg" alt="">
@@ -617,7 +617,7 @@
 													<div class="dialogue__data lpurple">Entity: birth_date=”01.01.1990”</div>
 													<div class="dialogue__data green">Action - API Call:  check_balance(“123456”, ”01.01.1990”) - status OK;</div>
 												</div><!--/dialogue__part-->
-												<div class="dialogue__part dialogue__part">
+												<div class="dialogue__part">
 													<div class="dialogue__item">
 														<div class="dialogue__icon">
 															<img src="assets/images/logo-grad.svg" alt="">
@@ -650,7 +650,7 @@
 						<div class="features__inner">
 							<div class="features__item">
 								<div class="features__info">
-									<div class="features__title title-medium">Make customers 20% more satisfied with 24/7 support</div>
+									<h3 class="features__title title-medium">Make customers 20% more satisfied with 24/7 support</h3>
 									<div class="features__description description">By providing assistance 24/7, a virtual voice assistant can help to reduce response times and ensure that customers can receive support when they need it.<br> Customers will appreciate being able to access assistance anytime or night rather than being limited to business hours.</div>
 								</div>
 								<div class="features__photo">
@@ -659,7 +659,7 @@
 							</div><!--/features__item-->
 							<div class="features__item">
 								<div class="features__info">
-									<div class="features__title title-medium">Reduce operational costs</div>
+									<h3 class="features__title title-medium">Reduce operational costs</h3>
 									<div class="features__description description">The use of a virtual voice assistant in the banking and finance industry can help to reduce operational costs by automating tasks, improving efficiency, and reducing the need for physical branches and human customer service representatives.</div>
 								</div>
 								<div class="features__photo">
@@ -668,7 +668,7 @@
 							</div><!--/features__item-->
 							<div class="features__item">
 								<div class="features__info">
-									<div class="features__title title-medium">Increase your leads<br> qualifying quality</div>
+									<h3 class="features__title title-medium">Increase your leads<br> qualifying quality</h3>
 									<div class="features__description description">By analyzing customer data, a virtual voice assistant can identify individuals who may be interested in specific products or services and qualify them as leads.<br> vTalk.ai voice bots can also answer customer questions and help generate leads by providing the information needed to make a decision.</div>
 								</div>
 								<div class="features__photo">
@@ -677,7 +677,7 @@
 							</div><!--/features__item-->
 							<div class="features__item">
 								<div class="features__info">
-									<div class="features__title title-medium">Improve payment processing</div>
+									<h3 class="features__title title-medium">Improve payment processing</h3>
 									<div class="features__description description">Virtual voice assistants can assist customers with tasks such as setting up automatic payments or scheduling one-time payments, helping to streamline the payment process.<br> By automating tasks such as data entry, virtual voice assistants can help reduce the risk of errors in the payment process and handle routine tasks such as verifying customer information and processing payments.</div>
 								</div>
 								<div class="features__photo">
